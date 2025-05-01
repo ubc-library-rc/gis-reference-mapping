@@ -5,8 +5,41 @@ nav_order: 1
 has_children: true
 ---
 # Mapping for Academic Publication
-    
-This workshop will provide an overview of how to create reference maps for academic publication. 
+
+This workshop will provide an overview of how to create simple, static reference maps for academic publication. By the end of this workshop, participants will be able to:
+
+- Find and download spatial data to serve as geographic context
+- Upload datasets into QGIS, a free and open-source geographic information system for analyzing, modifying, and visualizing spatial data
+- Format and symbolize spatial data layers, and compose a map for print that includes a title, scale bar, legend, and north arrow
+- Export map into  formats compatible for print and web publication
+
+The maps you will learn to create through this workshop are very basic. For example, contextual location or basemap with simple data layer. (show examples below in side-by-side)
+ <!-- maybe one with data points or polygon, one with satellite basemap?  -->
+
+## Audience
+
+**Geospatial novices welcome!** No prior experience with mapping is necessary, though familiarity with QGIS may be helpful. Check out our workshops [Intro to QGIS](https://ubc-library-rc.github.io/gis-intro-qgis/), [Tools and Workflows in QGIS](https://ubc-library-rc.github.io/gis-tools-workflows/), and [Plugins in QGIS](https://ubc-library-rc.github.io/gis-plugins-qgis/) in that order for a gentle introduction.  
+
+If you want to map your research area, or show your data points on a basemap, this workshop is for you. However, if you are looking to conduct spatial analysis on your data, recommend the workshops listed above. Finally, if you don't know what kind of output you want just yet, we encourage you to explore our resource for [Telling Spatial Stories](https://ubc-library-rc.github.io/gis-spatial-stories/). Here, you will be guided through choosing an output format and tools that serve your purpose, skillset, and timeframe. 
+
+
+## Before the Workshop
+
+>-   **Download QGIS!** QGIS can be downloaded from [qgis.org's Downloads page](https://qgis.org/en/site/forusers/download.html). In most cases, you'll want to download and install the **Long term release** instead of the latest release - currently **QGIS 3.40.4 'Bratislava'**. This will give you most of the functionality you'll need, without encountering the software bugs of newly released versions. **[See here](https://ubc-library-rc.github.io/gis-intro-qgis/content/installing-qgis.html) for further guidance downloading QGIS.**
+
+
+>-   **Download practice data** Add practice data button 
+
+<!-- could download practice data --> have them move a copy of their data into the folder for their own convience to work on during workshop. 
+ not downloading any data et
+ c --> but have your data/project in mind - think about what you want that map to be. where - area wise. what geographic layers - infrastructures. take a look at spatial stores - ensure - your publication ..  -->
+
+If you have your own dataset you want to map, make sure it is either in a spatial data format (such as Esri Shapefile, `.shp`, or geoJSON, `.geojson`), or saved as a `.csv`. For the purposes of this workshop, your dataset must have coordinate information saved in two separate columns, one for latitude and one for longitude. If you only have cities/countries or street addresses, follow the link in the resources below to book a 1:1 consult for additional support. If you have street addresses, you can also *geocode* these in QGIS (see [here](https://ubc-library-rc.github.io/gis-plugins-qgis/content/geocoding.html) for documentation.)
+
+      
+
+<br>
+
 
 --- 
 
