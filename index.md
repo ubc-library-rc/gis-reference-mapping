@@ -4,7 +4,9 @@ title: Introduction
 nav_order: 1
 has_children: true
 ---
-# Mapping for Academic Publication
+# Reference Mapping for Academic Publication
+<br>
+    
 
 This workshop will provide an overview of how to create simple, static reference maps for academic publication. By the end of this workshop, participants will be able to:
 
@@ -25,16 +27,14 @@ If you want to map your research area, or show your data points on a basemap, th
 
 ## Before the Workshop
 
->-   **Download QGIS!** QGIS can be downloaded from [qgis.org's Downloads page](https://qgis.org/en/site/forusers/download.html). In most cases, you'll want to download and install the **Long term release** instead of the latest release - currently **QGIS 3.40.4 'Bratislava'**. This will give you most of the functionality you'll need, without encountering the software bugs of newly released versions. **[See here](https://ubc-library-rc.github.io/gis-intro-qgis/content/installing-qgis.html) for further guidance downloading QGIS.**
+1.  **Download QGIS!** QGIS can be downloaded from [qgis.org's Downloads page](https://qgis.org/en/site/forusers/download.html). In most cases, you'll want to download and install the **Long term release** instead of the latest release - currently **QGIS 3.40.4 'Bratislava'**. This will give you most of the functionality you'll need, without encountering the software bugs of newly released versions. **[See the subpage, installing QGIS,](./installing-qgis.md) for further guidance.**
 
 
->-   **Download practice data** Add practice data button 
+2.   **Download and unzip** the workshop data folder below. This folder contains... Why its prepared for participants...  
+[Download Workshop Data](reference-mapping-workshop.zip){: .btn .btn-blue }
 
-<!-- could download practice data --> have them move a copy of their data into the folder for their own convience to work on during workshop. 
- not downloading any data et
- c --> but have your data/project in mind - think about what you want that map to be. where - area wise. what geographic layers - infrastructures. take a look at spatial stores - ensure - your publication ..  -->
 
-If you have your own dataset you want to map, make sure it is either in a spatial data format (such as Esri Shapefile, `.shp`, or geoJSON, `.geojson`), or saved as a `.csv`. For the purposes of this workshop, your dataset must have coordinate information saved in two separate columns, one for latitude and one for longitude. If you only have cities/countries or street addresses, follow the link in the resources below to book a 1:1 consult for additional support. If you have street addresses, you can also *geocode* these in QGIS (see [here](https://ubc-library-rc.github.io/gis-plugins-qgis/content/geocoding.html) for documentation.)
+If you have your own data you want to map, move it inside the unzipped data folder. Additionally, make sure it is either in a spatial data format (such as Esri Shapefile, `.shp`, or geoJSON, `.geojson`), or saved as a `.csv`. For the purposes of this workshop, your dataset must have coordinate information saved in two separate columns, one for latitude and one for longitude. If you only have cities/countries or street addresses, follow the link in the resources below to book a 1:1 consult for additional support. If you have street addresses, you can also *geocode* these in QGIS (see [here](https://ubc-library-rc.github.io/gis-plugins-qgis/content/geocoding.html) for documentation.)
 
       
 
