@@ -1,7 +1,8 @@
 ---
 layout: default
 title: QGIS
-nav_order: 2
+nav_order: 1
+parent: Tools for Mapping
 ---
 # Introduction to GIS
 
