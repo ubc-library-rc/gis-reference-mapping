@@ -30,17 +30,23 @@ make maps based on same dataset
 ### Choropleth maps
 Useful to ...
 
+![chropleth map](./images/chestnut-choropleth-map.jpeg)
+
 ### Proportional Symbol maps
 Useful to ...
+![chropleth map](./images/chestnut-proportional-symbol.jpeg)
 
 ### Dot Density maps
 Useful to ...
+![chropleth map](./images/chestnut-dot-density-map.jpeg)
 
 ### Heatmaps
 Useful to ...
+![chropleth map](./images/chestnut-heatmap.jpeg)
 
 ### Cartograms 
 Useful to ...
+![chropleth map](./images/chestnut-cartogram-map.jpeg)
 
 
 ----
