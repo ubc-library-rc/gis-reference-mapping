@@ -6,7 +6,9 @@ has_children: true
 ---
 
 ## Tools 
-There are different software available to make reference maps. While this workshop will focus on QGIS, you can also make quick maps using xyz. (see [assembling resources](https://ubc-library-rc.github.io/gis-spatial-stories/content/assembling-resources.html) page for alternate resources/software/tools for reference/static mapping ) This workshop uses QGIS --> more detailed maps for publication, also your own work.  QGIS is beginner friendly and if you're not doing more than making map, super doable. And, if you do decide to do spatial anlaysis, you're halfway there. 
+This workshop uses QGIS to generate reference maps for publication. QGIS isn't the only way to make a reference map. However, it provides ample detail and involves your original work. For a comprehensive list of different mapping tools and software, see [here](https://ubc-library-rc.github.io/gis-spatial-stories/content/resources-static-maps.html). QGIS is quite beginner friendly, especially if you want to just make a simple reference map. And, if you do decide to do more complex spatial analysis, you're halfway there. 
 
 
-If you're interested, you can also export from QGIS for more advanced editing in graphics illustration software, like illustrator or inkscape, free and open source alternative. 
+If you're interested in spending more time honing the aesthetics of your map, you can always export a rudimentary map from QGIs and conduct advanced editing in a graphics illustration software such as Adobe Illustrator or its open-source alternative, [Inkscape](https://inkscape.org/). 
+
+<!--maybe include walk through for exporting into inkscape, or links to resources-->
