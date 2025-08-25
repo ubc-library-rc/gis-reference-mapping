@@ -4,9 +4,11 @@ title: Introduction
 nav_order: 1
 has_children: true
 ---
+
+This workshop is in development and not yet complete.
+{: .note}
+
 # Mapping for Academic Publication
-<br>
-    
 
 This workshop will provide an overview of how to create simple, static maps to accompany academic publications. We will use [QGIS](https://qgis.org/), a free and open-source Geographic Information System (GIS) for analyzing, modifying, and visualizing spatial data. This workshop is geared towards mapping novices who either want to create a map that geographically contextualizes their study area, or whose project involves data with a spatial component they are eager to visualize. While making such maps on your own can feel daunting, this workshop aims to give participants the confidence to: 
 
@@ -25,7 +27,7 @@ This workshop will provide an overview of how to create simple, static maps to a
 
 If your goal is to map your research area or  want to map your research area, or show your data points on a basemap, this workshop is for you. However, if you are looking to conduct more advanced spatial analysis on your data, we recommend the QGIS workshops listed above. If you realize you actually want to make interactive and dynamic web-based maps that can be embedded in a website or shared via a link, check out our [Webmapping Workshop](https://ubc-library-rc.github.io/gis-intro-leaflet/).
 Finally, if you don't know what kind of output you want just yet, we encourage you to explore our resource for [Telling Spatial Stories](https://ubc-library-rc.github.io/gis-spatial-stories/). Here, you will be guided through choosing an output format and tools that serve your purpose, skillset, and timeframe. 
-{: .note}
+
 
 
 ## Before the Workshop
