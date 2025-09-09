@@ -12,7 +12,7 @@ This workshop is in development and not yet complete.
 
 This workshop will provide an overview of how to create simple, static maps to accompany academic publications. We will use [QGIS](https://qgis.org/), a free and open-source Geographic Information System (GIS) for analyzing, modifying, and visualizing spatial data. This workshop is geared towards mapping novices who either want to create a map that geographically contextualizes their study area, or whose project involves data with a spatial component they are eager to visualize. While making such maps on your own can feel daunting, this workshop aims to give participants the confidence to: 
 
-- Decide what kind of map best conveys their research or contextualizes their study; 
+- Decide what kind of map best conveys your research or contextualizes your study; 
 - If needed, find and download relevant spatial data; 
 - Upload datasets into QGIS, as well as edit and symbolize data layers;
 - Compose a map layout that includes a title, scale bar, legend, and north arrow; and
@@ -23,7 +23,7 @@ This workshop will provide an overview of how to create simple, static maps to a
 
 ## Audience
 
-**Geospatial novices welcome!** No prior experience with mapping is necessary, though familiarity with QGIS is helpful. You are encouraged to explore our workshops [Intro to QGIS](https://ubc-library-rc.github.io/gis-intro-qgis/), [Tools and Workflows in QGIS](https://ubc-library-rc.github.io/gis-tools-workflows/), and [Plugins in QGIS](https://ubc-library-rc.github.io/gis-plugins-qgis/) *in that order* for a gentle introduction.  
+**Geospatial novices welcome!** No prior experience with mapping is necessary, though familiarity with QGIS is helpful. Before taking this workshop, you are encouraged to explore our  [Intro to QGIS](https://ubc-library-rc.github.io/gis-intro-qgis/), [Tools and Workflows in QGIS](https://ubc-library-rc.github.io/gis-tools-workflows/), and [Plugins in QGIS](https://ubc-library-rc.github.io/gis-plugins-qgis/) offerings *in that order* for a gentle introduction.  
 
 If your goal is to map your research area or  want to map your research area, or show your data points on a basemap, this workshop is for you. However, if you are looking to conduct more advanced spatial analysis on your data, we recommend the QGIS workshops listed above. If you realize you actually want to make interactive and dynamic web-based maps that can be embedded in a website or shared via a link, check out our [Webmapping Workshop](https://ubc-library-rc.github.io/gis-intro-leaflet/).
 Finally, if you don't know what kind of output you want just yet, we encourage you to explore our resource for [Telling Spatial Stories](https://ubc-library-rc.github.io/gis-spatial-stories/). Here, you will be guided through choosing an output format and tools that serve your purpose, skillset, and timeframe. 
@@ -32,11 +32,10 @@ Finally, if you don't know what kind of output you want just yet, we encourage y
 
 ## Before the Workshop
 
-1.  **Download QGIS!** QGIS can be downloaded from [qgis.org's Downloads page](https://qgis.org/en/site/forusers/download.html). In most cases, you'll want to download and install the **Long term release** instead of the latest release - currently **QGIS 3.40.4 'Bratislava'**. This will give you most of the functionality you'll need, without encountering the software bugs of newly released versions. See the subpage to this page, **[installing QGIS,](./installing-qgis.md), for further guidance.**
+1.  **Download QGIS!** QGIS can be downloaded from [qgis.org's Downloads page](https://qgis.org/en/site/forusers/download.html). In most cases, you'll want to download and install the **Long term release** instead of the latest release - currently **QGIS 3.40.4 'Bratislava'**. This will give you most of the functionality you'll need without encountering the software bugs of newly released versions. See the subpage to this page, **[installing QGIS,](./installing-qgis.md), for further guidance.**
 
 
 2.   **Download and unzip** the workshop data folder below. Download it to a folder on your physical computer, such as Desktop or Downloads, *not* OneDrive.
-<!-- This folder contains... Why its prepared for participants...   -->
 
 [Download Workshop Data](reference-mapping-workshop.zip){: .btn .btn-blue }
 
