@@ -25,13 +25,15 @@ Spatial data have different file extensions that you may be used to. Raster data
 
 Finally, **tabular data** is simply data formatted into a table by rows and columns. All vector data has associated tabular data that can be opened and viewed inside a GIS. Your tabular data may have a spatial component, like coordinates, or it may not. If a spatial component is present, you can simply load it into a GIS and tell the GIS to create a spatial layer by referencing the stored latitude and longitude (you will need to ensure lat and long are in separate columns, and the GIs is reading latitude as _y_  and longitude as _x_/). If your tabular data does not have locative information, you can still load it into GIS and join it with a spatial layer that already exists based on a key value. However, your tabular data *must be in `.csv` format, so make sure to export any excel sheets as comma separated values before attempting to load them in GIS. 
 
-(have a demo or resources for doing everything mentioned above)
+(have a demo or resources for doing everything mentioned above) -- demo in next page
 
 ---
 
 
 ## Data sources
 Where to find data? Maybe you already have some, maybe you're still searching. Try UBC Library data search, municipal and governmental agencies local to your project such as vancouver open data portal or statscan. Humanitarian data exchange is great for xyz. Worldclim is good for xyz. Internet searching. Refer to our [Tools and Workflows in QGIS Workshop](https://ubc-library-rc.github.io/gis-tools-workflows/content/downloading-data.html) for example of downloading spatial data from municipal open data portals. [Open Street Maps (OSM)](https://www.openstreetmap.org/#map=11/49.2151/-123.0393) is a great research for free and open source infrastructural data. Refer to our [Plugins in QGIS Workshop](https://ubc-library-rc.github.io/gis-plugins-qgis/content/extracting-osm-data.html) for a demonstration of how to extract and download OSM data or use it as a basemap for your maps. [Natural Earth](https://www.naturalearthdata.com/downloads/) provides  free, public domain raster and vector data at a global scale. Natural Earth is an excellent resource for simple reference mapping.
+
+satellite imagery download from sentinal etc. -- also planet accounts
 
 <!-- 
  Th also provides free Natural earth --Shapefiles and rasters. hillshade/topogoraphy, countrie outlines, water bodies (lakes and rivers). some mapping -- think about borders as political... always double check xyz.  -->
@@ -49,3 +51,6 @@ can also follow sattelite imgaery to do this (have walk-through demo of creating
 To do... this workshop we will download from natural earth. also example of creating our own shapefile 
 
 document and demo 
+
+
+add -- downloading data from bc data warehouse 
