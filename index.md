@@ -8,7 +8,7 @@ has_children: true
 This workshop is in development and not yet complete.
 {: .note}
 
-# Mapping for Academic Publication
+# Reference Mapping for Academic Publication
 
 This workshop will provide an overview of how to create simple, static maps to accompany academic publications. We will use [QGIS](https://qgis.org/), a free and open-source Geographic Information System (GIS) for analyzing, modifying, and visualizing spatial data. This workshop is geared towards mapping novices who either want to create a map that geographically contextualizes their study area, or whose project involves data with a spatial component they are eager to visualize. While making such maps on your own can feel daunting, this workshop aims to give participants the confidence to: 
 
@@ -18,8 +18,10 @@ This workshop will provide an overview of how to create simple, static maps to a
 - Compose a map layout that includes a title, scale bar, legend, and north arrow; and
 - Export this map into formats compatible for print and digital publication.
 
-<!-- The maps you will learn to create through this workshop are quite basic. For example, contextual location or basemap with simple data layer. (show examples below in side-by-side; maybe one with data points or polygon, one with satellite basemap?) If you are interested in more advanced spatial analysis, check out xyz workshops. For webmapping/making dynamic and interactive maps, check out webmapping workshop. If you are unsure the output you want, look through our Telling Spatial Stories workshop/resource base to get oriented.// project design guidance.  -->
- 
+
+![canada map](./content/images/canada-map-demo.jpeg)
+
+----
 
 ## Audience
 
@@ -32,7 +34,7 @@ Finally, if you don't know what kind of output you want just yet, we encourage y
 
 ## Before the Workshop
 
-1.  **Download QGIS!** QGIS can be downloaded from [qgis.org's Downloads page](https://qgis.org/en/site/forusers/download.html). In most cases, you'll want to download and install the **Long term release** instead of the latest release - currently **QGIS 3.40.4 'Bratislava'**. This will give you most of the functionality you'll need without encountering the software bugs of newly released versions. See the subpage to this page, **[installing QGIS,](./installing-qgis.md), for further guidance.**
+1.  **Download QGIS!** QGIS can be downloaded from [qgis.org's Downloads page](https://qgis.org/en/site/forusers/download.html). In most cases, you'll want to download and install the **Long term release** instead of the latest release - currently **QGIS 3.40.4 'Bratislava'**. This will give you most of the functionality you'll need without encountering the software bugs of newly released versions. See the subpage to this page **[installing QGIS](./installing-qgis.md)** for further guidance.
 
 
 2.   **Download and unzip** the workshop data folder below. Download it to a folder on your physical computer, such as Desktop or Downloads, *not* OneDrive.
