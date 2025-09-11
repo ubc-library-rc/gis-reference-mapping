@@ -26,6 +26,8 @@ Here is an example of the map we will make, styled in different ways.
 
 ![canada map](./images/canada-map-multicolored.jpeg)
 
+![native land map](./images/native-land-map.jpeg)
+
 
 
 
