@@ -18,6 +18,16 @@ Today's workshop will use data from Natural Earth, Statistics Canada, and Native
 
 ### Data Provided
 
+- Indigenous territories from [Native Land Digital API](https://api-docs.native-land.ca/). Data was downloaded for the entire Earth in `.geojson` format. While the file is provided for you in the workshop data folder, you can try your hand at downloading it yourself by either signing up for your own API key, or using `AADlPNbKCBAepz816odRT` (my key) and following the instructions [here](https://api-docs.native-land.ca/full-geojsons). 
+
+Please take a moment to explore [native-land.ca](https://native-land.ca/) so that you can visualize the Indigenous territories, languages, and treaties in your area.
+
+<iframe src="https://native-land.ca/api/embed/embed.html?maps=territories&position=49.244770894278666, -123.16698232306474&key=AADlPNbKCBAepz816odRT" style="width:100%; height:400px; border:none;"></iframe>
+<br>
+- Inside the workshop data folder you'll see a subfolder called `thematic-mapping`. This contains xyz layers you are welcome to use when practicing thematic mapping. 
+
+<br>
+
 
 ### Data needed
 
