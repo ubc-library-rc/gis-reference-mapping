@@ -10,6 +10,8 @@ This workshop is in development and not yet complete.
 
 # Reference Mapping for Academic Publication
 
+Add note: why you'd make your own reference maps for publication. EG folks looking for materials for article, book, thesis/diss but map is copywriting and data isnt. can make your own! emphasis that this workshop will focus on design componants and considerations - best practices 
+
 This workshop will provide an overview of how to create simple, static maps to accompany academic publications. We will use [QGIS](https://qgis.org/), a free and open-source Geographic Information System (GIS) for analyzing, modifying, and visualizing spatial data. This workshop is geared towards mapping novices who either want to create a map that geographically contextualizes their study area, or whose project involves data with a spatial component they are eager to visualize. While making such maps on your own can feel daunting, this workshop aims to give participants the confidence to:
 
 - Decide what kind of map best conveys your research or contextualizes your study;
@@ -26,85 +28,9 @@ This workshop will provide an overview of how to create simple, static maps to a
 ![native land map](./content/images/native-land-map.jpeg) -->
 
 <!--carousel styling and code from W3schools-->
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
-.slideshow-container {
-max-width: 1000px;
-position: relative;
-margin: auto;
-}
-.prev, .next {
-cursor: pointer;
-position: absolute;
-top: 50%;
-width: auto;
-padding: 16px;
-margin-top: -22px;
-color: black;
-background-color: rgba(255, 255, 255, 0.51);
-font-weight: bold;
-font-size: 18px;
-transition: 0.6s ease;
-border-radius: 0 3px 3px 0;
-user-select: none;
-}
-.next {
-right: 0;
-border-radius: 3px 0 0 3px;
-}
-.prev:hover, .next:hover {
-background-color: rgba(142, 122, 163, 0.5);
-}
-.text {
-color: #f2f2f2;
-font-size: 15px;
-padding: 8px 12px;
-position: absolute;
-bottom: 8px;
-width: 100%;
-text-align: center;
-}
-.numbertext {
-color: #211c1cff;
-font-size: 12px;
-padding: 8px 12px;
-position: absolute;
-top: 0;
-}
-.dot {
-cursor: pointer;
-height: 10px;
-width: 10px;
-margin: 0 2px;
-background-color: #bbb;
-border-radius: 5%;
-display: inline-block;
-transition: background-color 0.6s ease;
-}
-.active, .dot:hover {
-background-color: #717171;
-}
-.fade {
-animation-name: fade;
-animation-duration: 1.5s;
-}
-@keyframes fade {
-from {opacity: .4}
-to {opacity: 1}
-}
-@media only screen and (max-width: 300px) {
-.prev, .next,.text {font-size: 11px}
-}
-</style>
-</head>
 
-<body>
+<html>
+<link rel="stylesheet" href="./style.css">
 <div class="slideshow-container">
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
@@ -119,8 +45,8 @@ to {opacity: 1}
   <div class="numbertext">3 / 3</div>
   <img src="./content/images/native-land-map.jpeg" style="width:100%">
 </div>
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
+<a class="prev1" onclick="plusSlides(-1)">❮</a>
+<a class="next1" onclick="plusSlides(1)">❯</a>
 </div>
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span> 
@@ -152,7 +78,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
-</body>
 </html>
 
 ---
