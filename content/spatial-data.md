@@ -5,7 +5,6 @@ nav_order: 0
 parent: Hands On
 ---
 
-
 # Spatial Data
 A Geographic Information System (GIS) works with data that is tied to a location on Earth. This type of data is often referred to as "spatial data", "geospatial data", or even "GIS data", and is spatially referenced using location information — most commonly geographic coordinates. A GIS uses this location information to project a geospatial file into a virtual geographic space where it can then be visualized and analyzed. If your data's locative information in the form of countries, cities, or street addresses, this can be made legible to a GIS with a few extra steps. 
 
@@ -23,6 +22,3 @@ Spatial data have different file extensions that you may be used to. Raster data
 
 Finally, **tabular data** is simply data formatted into a table by rows and columns. All vector data has associated tabular data that can be opened and viewed inside a GIS. Your tabular data may have a spatial component, like coordinates, or it may not. If a spatial component is present, you can simply load it into a GIS and tell the GIS to create a spatial layer by referencing the stored latitude and longitude (you will need to ensure lat and long are in separate columns, and the GIS is reading latitude as _y_  and longitude as _x_). If your tabular data does not have locative information, you can still load it into GIS and join it with a spatial layer that already exists based on a key value. However, your tabular data *must be in `.csv` format, so make sure to export any excel sheets as comma separated values before attempting to load them in GIS. 
 
-(have a demo or resources for doing everything mentioned above) -- demo in next page
-
----
