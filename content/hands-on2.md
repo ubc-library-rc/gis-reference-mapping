@@ -10,10 +10,6 @@ parent: Hands On
 To begin the Hands-On portion of this workshop, we will open and setup the QGIS project. This page will introduce you to the QGIS interface, and guide you through loading data, setting the project properties, managing your layers, and creating spatial bookmarks. 
 
 
-<!-- Maybe need a nother page between loading data (aka project setup) and modifying layers (aka symbolization). this would be managing layers and have to do with all the organization. feels overwhelming to have gui introduction and layer management all on same page. also hard for people returning asyncrhonously to find relevent documentaiton. 
-
-I guess if it were called project setup, then managing layers would make more sense to be all on same page. top of page could have table of contents and say in this page we will - intro gui, add/load data layers to project - project properties - - spatial bookmarks - manage layers (in that order - see last two. ) -->
-
 
 <details open markdown="block">
   <summary>
