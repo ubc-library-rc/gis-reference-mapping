@@ -25,7 +25,7 @@ Finally, you can always create your own vector layers, or create new shapefiles 
 
 ## For today's workshop... 
 
-Today's workshop will use data from Natural Earth, Statistics Canada, and Native Land Digital. The workshop folder contains some of this data, as well as additional datasets for you to practice thematic mapping. However, because finding, downloading, and preparing spatial data is a major part of mapping for academic publication, you will be guided through downloading the main datasets for today's workshop on your own. Remember, move each dataset you download to the workshop folder and *unzip it* there. 
+Today's workshop will use _vector data_ data from Natural Earth, Statistics Canada, and Native Land Digital. The workshop folder contains some of this data, as well as additional datasets for you to practice thematic mapping. However, because finding, downloading, and preparing spatial data is a major part of mapping for academic publication, you will be guided through downloading the main datasets for today's workshop on your own. Remember, move each dataset you download to the workshop folder and *unzip it* there. 
 
 ### Data needed
 
@@ -58,6 +58,9 @@ Some data is provided already for you.
 1. Inside the workshop data folder you'll see a subfolder called `thematic-mapping`. This contains data on chestnut street trees of Vancouver downloaded from Vancouver's open data portal and modified slightly to make them ready for mapping. You are welcome to use these layers practicing thematic mapping. 
 
 2. Indigenous territories from [Native Land Digital API](https://api-docs.native-land.ca/). The data was downloaded for the entire Earth in `.geojson` format. While the file is provided for you in the workshop data folder, you can practice downloading it yourself after this workshop by either signing up for your own API key, or using `AADlPNbKCBAepz816odRT` (my key) and following the instructions [here](https://api-docs.native-land.ca/full-geojsons). 
+
+also show geojson dot io and overlapping
+
 
 Take a moment to explore [native-land.ca](https://native-land.ca/) so that you can visualize the Indigenous territories, languages, and treaties in your area. Below is a snapshot of where we are. 
 
