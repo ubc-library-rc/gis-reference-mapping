@@ -3,7 +3,7 @@ layout: default
 title: Acknowledgements + Resources
 nav_order: 20
 ---
-## Resources
+## Research Commons Resources
 
 - [Book a consultation](https://researchcommons.library.ubc.ca/consultation-requests/)
 - [View upcoming workshops](https://researchcommons.library.ubc.ca/workshops/)
@@ -28,3 +28,13 @@ We'd like to acknowledge the Indigenous lands where we are located. The UBC Vanc
 Please take a moment to explore [native-land.ca](https://native-land.ca/) so that you can visualize the Indigenous territories, languages, and treaties in your area.
 
 <iframe src="https://native-land.ca/api/embed/embed.html?maps=territories&position=49.244770894278666, -123.16698232306474&key=AADlPNbKCBAepz816odRT" style="width:100%; height:400px; border:none;"></iframe>
+
+
+----
+## Creating data sets
+quick demo
+
+
+## Geocoding 
+see plugins workshop
+see workshop 
