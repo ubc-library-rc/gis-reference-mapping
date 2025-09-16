@@ -10,15 +10,18 @@ This workshop is in development and not yet complete.
 
 # Reference Mapping for Academic Publication
 
-Add note: why you'd make your own reference maps for publication. EG folks looking for materials for article, book, thesis/diss but map is copywriting and data isnt. can make your own! emphasis that this workshop will focus on design componants and considerations - best practices 
+This workshop will provide an overview of how to create simple, static reference maps to accompany academic publications. We will use [QGIS](https://qgis.org/), a free and open-source Geographic Information System (GIS) for analyzing, modifying, and visualizing spatial data.  
 
-This workshop will provide an overview of how to create simple, static maps to accompany academic publications. We will use [QGIS](https://qgis.org/), a free and open-source Geographic Information System (GIS) for analyzing, modifying, and visualizing spatial data. This workshop is geared towards mapping novices who either want to create a map that geographically contextualizes their study area, or whose project involves data with a spatial component they are eager to visualize. While making such maps on your own can feel daunting, this workshop aims to give participants the confidence to:
+Why make your own reference map? While maps of your research area may already exist, they often have licenses that prohibit their republication elsewhere. Alternatively, you might want to show a location specific to your research, or mark the sites where fieldwork was conducted. Although the use of existing maps is frequently restricted, the data that created them is often readily available. This means you can make your own map with it!
 
-- Decide what kind of map best conveys your research or contextualizes your study;
-- If needed, find and download relevant spatial data;
-- Upload datasets into QGIS, as well as edit and symbolize data layers;
-- Compose a map layout that includes a title, scale bar, legend, and north arrow; and
-- Export this map into formats compatible for print and digital publication.
+This workshop is geared towards mapping novices. If you want to create  a map that geographically contextualizes your study area, or have a project involving data with a spatial component you're eager to visualize, this workshop is for you.  While making such maps on your own can feel daunting, this workshop will give you the confidence to:
+
+- Decide what kind of map best conveys your research or contextualizes your study area;
+- Find and download relevant spatial data;
+- Load datasets into QGIS and style them as data layers;
+- Compose a map that includes a title, scale bar, legend, and north arrow; and
+- Export this map into formats compatible with print and digital publication.
+<br>
 
 <!--
 
@@ -86,8 +89,8 @@ function showSlides(n) {
 
 **Geospatial novices welcome!** No prior experience with mapping is necessary, though familiarity with QGIS is helpful. Before taking this workshop, you are encouraged to explore our [Intro to QGIS](https://ubc-library-rc.github.io/gis-intro-qgis/), [Tools and Workflows in QGIS](https://ubc-library-rc.github.io/gis-tools-workflows/), and [Plugins in QGIS](https://ubc-library-rc.github.io/gis-plugins-qgis/) offerings _in that order_ for a gentle introduction.
 
-If your goal is to map your research area or want to map your research area, or show your data points on a basemap, this workshop is for you. However, if you are looking to conduct more advanced spatial analysis on your data, we recommend the QGIS workshops listed above. If you realize you actually want to make interactive and dynamic web-based maps that can be embedded in a website or shared via a link, check out our [Webmapping Workshop](https://ubc-library-rc.github.io/gis-intro-leaflet/).
-Finally, if you don't know what kind of output you want just yet, we encourage you to explore our resource for [Telling Spatial Stories](https://ubc-library-rc.github.io/gis-spatial-stories/). Here, you will be guided through choosing an output format and tools that serve your purpose, skillset, and timeframe.
+If your goal is to map your research area or visualize research data, this workshop is for you. However, if you are looking to conduct more advanced spatial analysis on your data, we recommend the QGIS workshops listed above. If you realize you actually want to make interactive and dynamic web-based maps that can be embedded in a website or shared via a link, check out our [Webmapping Workshop](https://ubc-library-rc.github.io/gis-intro-leaflet/).
+Finally, if you don't know what kind of output you want just yet, we encourage you to explore our resource for [Telling Spatial Stories](https://ubc-library-rc.github.io/gis-spatial-stories/). Here, you will be guided through choosing an output format and tools that serve your purpose, skillset, and timeframe. 
 
 ## Before the Workshop
 
@@ -107,8 +110,8 @@ If you're coming to this workshop with your own data in-hand, be sure to move it
 #### GIS Resources at UBC:
 
 - General Informational website for all things UBC GIS: [gis.ubc.ca](http://gis.ubc.ca/)
-- UBC Library's guide for finding and working with GIS resources: [guides.library.ubc.ca/gis](http://guides.library.ubc.ca/gis)
-- Archive of all [Research Commons workshops](https://ubc-library-rc.github.io/)
+- UBC Library guide for finding and working with GIS resources: [guides.library.ubc.ca/gis](http://guides.library.ubc.ca/gis)
+- Archive of [Research Commons workshops](https://ubc-library-rc.github.io/)
 - Research Commons [Events Calender](https://researchcommons.library.ubc.ca/workshops/) for upcoming facilitated workshops
 - Contact UBC Library’s Geospatial team: `library.gis@ubc.ca`
 - Schedule a 1:1 consult with the geospatial team [here](https://libcal.library.ubc.ca/appointments/research_commons#s-lc-public-pt)
