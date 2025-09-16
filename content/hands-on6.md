@@ -1,26 +1,8 @@
 ---
 layout: default
-title: 6. Insets (Optional)
+title: 6. Selecting Polygons
 nav_order: 6
 parent: Hands On
 ---
-# Insets
-What they are; why helpful.
-
-This page will demonstrate how to make a map of British Columbia with an inset showing Canada. Will be in black and white. (or choose something else like using the Native Land digital data)
-
-here is what it will look like below. 
-
-![inset map](./images/bc-map-demo.jpeg)
-
-Considerations. 
-Where to locate it. 
-Adding a frame or call out. 
-Leader lines
-
-Zooming in, scale. If zooming out, no scale. 
-When to use a north arrow. 
-
-Inset might have different projection.  
-
-Show example map I made. 
+# Selections - selecting certain polygons
+Using NE data - but only want to map a single country, want to have the rest as background. quick tutorial on selecting, exporting feature as, and then making map. 
