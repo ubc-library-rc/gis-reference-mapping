@@ -15,8 +15,8 @@ While outside the remit of this workshop, may be important to you is whether you
 
  
 
-- maybe include walk through for exporting into inkscape, or links to resources
-- maybe include some more tools?
+<!-- - maybe include walk through for exporting into inkscape, or links to resources
+- maybe include some more tools? -->
 
 ## Geographic Information Systems (GIS) 
 This workshop uses a Geographic Information System (GIS) to generate reference maps for publication. GIS is an abbreviation for Geographic Information System. A nice description of GIS that provides a bit of relevancy comes from QGIS's [*A Gentle Introduction to GIS*](https://docs.qgis.org/3.10/en/docs/gentle_gis_introduction/introducing_gis.html):
