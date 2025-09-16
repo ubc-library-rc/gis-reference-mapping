@@ -12,20 +12,29 @@ Another kind of map is a **thematic map**. Writes Statistics Canada: “A themat
 <!-- >> see other workshops like intro and tools and workflows for data modification, selects, etc. if you need to do processing/calculations to your spatial data before youre ready to symbolize it.  -->
 If you have spatial questions you want to explore with your data, you’ll likely need to perform some kind of spatial analysis within a GIS. If you are still designing your project and unsure as to your output, check out the Research Common's [Designing Spatial Stories](https://ubc-library-rc.github.io/gis-spatial-stories/) workshop, email the Geospatial team at `library.gis@ubc.ca`, or [book a consult](https://libcal.library.ubc.ca/appointments/research_commons#s-lc-public-pt).
 
-Below are examples of different thematic maps, all visualizing chestnut street trees by Vancouver neighborhoods.
+Below are examples of different thematic maps, all visualizing chestnut street trees by Vancouver neighborhoods. The Hands-On section of this workshop contains documentation for making each kind of thematic map below.
 <br>
 
 ## Choropleth maps
-Useful to show and compare the density, frequency, or quantity of a data value generalized across standardized geographic areas (such as zip-code, province, or country). Unless you specifically want to emphasize differences in total number of events/data points, normalization is best practice. Normalization is when you divide the values for each geographic area by something like the area or population of that area. This enables better comparison across multiple geographic areas. 
+Choropleth maps are useful to show and compare the density, frequency, or quantity of a value generalized across standardized geographic areas (such as zip-codes, provinces, or countries). Unless you specifically want to emphasize differences in total number of events/data points, it is best practice to normalize your data when choropleth mapping. Normalization is when you divide the values for each geographic area by something like the area in square kilometers or total population of that area. For instance, mapping winter flu cases across census tracts in British Columbia, you'd want to normalize the total cases in each census tract by that tract's total population. Normalization enables better comparison across multiple geographic areas. 
+
+The map below shows total chestnut street trees per Vancouver neighborhood. 
 
 ![chropleth map](./images/chestnut-choropleth-map.jpeg)
+
+The map below shows chestnut street trees as a fraction of total street trees per Vancouver neighborhood. 
+
+![chropleth map normalized](./images/normalized-chestnut-choropleth.png)
+
+Each map serves a purpose. It's simply important to consider what information you want to convey with your map. 
 
 ---- 
 
 
 ## Proportional Symbol maps
-Useful to visualize quantity of something across respective locations. Where choropleth maps use a color gradient to convey value differentials, proportional symbol maps use symbol size. Proportional symbols are quite intuitive, and can be combined with other parameters like color (or even situated on top of a choropleth map) to provide rich information. See [Axis Maps](https://www.axismaps.com/guide/proportional-symbols) for a guide to proportional symbol maps. 
-Note: In most cases you *do not* normalize values when using proportional symbols, as that would reduce the range in difference. If anything, it can be useful to exaggerate the range slightly. While Absolute scaling renders xyz, perceptual/Apparent scaling compensates for the eye's tendency to reduce difference in sizes close together. [See here for more](https://makingmaps.net/2007/08/28/perceptual-scaling-of-map-symbols/). 
+Proportional symbol maps are useful to visualize the quantity of something across respective locations. Choropleth maps use a color gradient to convey value differentials, whereas proportional symbol maps use symbol size. Proportional symbols are quite intuitive, and can be combined with other parameters like color and lettering size to provide rich spatial information. Proportional symbols can even be layered atop a choropleth map. See [Axis Maps](https://www.axismaps.com/guide/proportional-symbols) for a guide to proportional symbol maps. 
+
+Note: In most cases you *do not* normalize values when using proportional symbols, as that would reduce the range in difference. If anything, it can be useful to exaggerate the range slightly. While Absolute Scaling renders symbols increasingly larger along a linear scale, Perceptual/Apparent Scaling compensates for the eye's tendency to reduce difference in sizes close together. [See here for more](https://makingmaps.net/2007/08/28/perceptual-scaling-of-map-symbols/). 
 
 ![prop symbol map](./images/chestnut-proportional-symbol.jpeg)
 
@@ -56,7 +65,7 @@ Useful to show the concentration and distribution of discrete incidents. Each do
 ----
 
 ## Heatmaps
-Useful to ...
+Useful to show intensity or frequency of occurrence. Heatmaps can be thought about as generalized dot density maps. 
 ![heat map](./images/chestnut-heatmap.jpeg)
 
 ## Cartograms 
