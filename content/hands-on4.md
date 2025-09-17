@@ -78,34 +78,38 @@ You'll notice that Canada might not take up the full page; in other words, it's 
 
 The scale number, 27056663, is the denominator in a fraction 1:27056663. This means one unit on the map represents 27,056,663 units in the real world. To zoom in, we want to reduce the denominator so that the fraction is less small of a number, and 1 unit on the map corresponds to a smaller area in the real world. When in doubt, simply increase or decrease the scale number substantially to gauge which direction you need to go in. For this map, something like `22,000,000` should work. 
  
-To move your map around within the frame itself, use the **Move item content** tool from the left-hand toolbar.  <img src="./images/move-item-content-icon_20250915.png" style="width:7%"> 
-To select, resize, or move content like the map itself, use the **Move/Select item** tool. <img src="./images/move-select-icon_20250915.png" style="width:7%">
+  - <img src="./images/move-item-content-icon_20250915.png" style="width:7%">To move your map around within the frame itself, use the **Move item content** tool from the left-hand toolbar.  
+
+  - <img src="./images/move-select-icon_20250915.png" style="width:7%">To select, resize, or move content like the map itself, use the **Move/Select item** tool.
 <!-- <img src="./images/move-item-content_20250915.png" style="width:100%"> -->
 
 
 ### Add scalebar
 {: .no_toc}
-Add a scale bar to your map. 
+Add a scalebar to your map. 
 
 ![add scale bar](./images/add-scale-bar_20250916.gif)
 
 Best practice is for your scale bar to be in metric units. Choose your scalebar **Style** from the dropdown menu:
 
-<img src="./images/edit-scalebar1_20250915.png" style="width:60%">
+<img src="./images/edit-scalebar1_20250915.png" style="width:100%">
 
-Scroll down and expand the **Appearance** option to  customize the symbology of your scalebar, as well as its lettering. Click on **Font** in Appearance to change the font family and color of your scalebar labels. Thinking about Visual Hierarchy, perhaps the scalebar and lettering could be a lighter or more transparent color, or the same color as the provinces (if your symbology is single symbol). 
+Scroll down and expand the **Appearance** option to  customize the symbology of your scalebar, as well as its lettering. Click on **Font** in Appearance to change the font family and color of your scalebar labels. Thinking about Visual Hierarchy, perhaps the scalebar and lettering could be a lighter in color, or slightly transparent. Consider matching the lettering and line's color with the provinces (if you're using single symbol symbology). 
 
 
 
 ### North Arrow
 {: .no_toc}
-Add a north arrow. 
-Grid North and True north explain.
-Map projection is conic - set to true north.
-Grid North --> projection - up from grid
-True North --> globe - 
+Add a north arrow. You will notice there's an option to choose either Grid North or True North. According to [QGIS](https://docs.qgis.org/3.40/en/docs/user_manual/print_composer/composer_items/composer_image.html)
+  > - **Grid north**: the direction of a grid line which is parallel to the central meridian of the national/local grid
+  > - **True north**: direction of a meridian of longitude.
 
-https://docs.os.uk/more-than-maps/geographic-data-visualisation/guide-to-cartography/north-arrows
+Depending on what projection is used and whereabouts your map is zoomed in to (near a pole or the equator; showing a large geographic area vs. a small one), which you choose will be more or less important. Today's workshop won't go into the specifics, but Grid North is generally okay for maps (less so for compass travel).
+
+The [central meridian](https://gisgeography.com/central-meridian/) is where the 2-dimensional surface that's wrapped around the globe in a projection intersects with that globe. If your mapped area is around a central meridian, which is likely if you're using a UTM Zone'd projection or otherwise projection that's specifically designed for your region because of it's central meridian, then you can go ahead and use Grid North. If your map is centered on a region near the north (or south) pole, you might be better served using Truth North as that will angle the north arrow along the lines of longitude. (Double check this)
+
+
+  - [See more on north arrows](https://docs.os.uk/more-than-maps/geographic-data-visualisation/guide-to-cartography/north-arrows)
 
 
 
