@@ -6,7 +6,8 @@ parent: Hands On
 ---
 
 # Basemaps
-What they are and why use them. Include an Example map. 
+A basemap is helpful to give spatial context to your data as you work. One way to add a basemap. You can also create a reference map that is simply a basemap. The following page will guide you through adding basemaps to your QGIS project. 
+ 
 
 
 
