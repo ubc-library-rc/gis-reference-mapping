@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 6. Selecting Polygons
+title: 6. Selections (optional)
 nav_order: 6
 parent: Hands On
 ---
