@@ -156,7 +156,7 @@ While there is more to Visual Hierarchy, that is enough to get you started. Take
 (You'll have another 5-10 minutes to work so after print layout and items are introduced in the next page.)
 
 
-<!-- add about saving styles etc. and labelling by filters etc.  -->
+<!-- .add about saving styles etc. and labelling by filters etc.  -->
 
 ----
 
