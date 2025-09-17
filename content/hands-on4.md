@@ -127,20 +127,22 @@ The border - frame around map is called a neatline. We can add this as its own s
 
 ### Legend
 {: .no_toc}
-not required here
-
-
-for each component go through styling and visual hierarchy considerations 
+Though not required here, explain?
+For each component go through styling and visual hierarchy considerations 
 
 
 ## Edit layout items
-with visual hierarchy in mind
+With visual hierarchy in mind
 
 
 
 ## Export your map
-image or pdf or svg
-make sure at least 600dpi so not grainy 
+You can export your map as an image, PDF, or scalable vector graphic (`.svg`) from the Print Layout toolbar, or from the Layout menu. You can also print your map directly from QGIS. 
+
+<img src="./images/export-layout_20250927.png" style="width:39%">
+<img src="./images/print-layout2_20250917.png" style="width:43%">
+
+When exporting as an image or PDF, you will be prompted to enter the resolution. I recommend increasing the resolution to at least 450dpi, otherwise your map will be blurry. 
 
 
 
