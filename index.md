@@ -12,8 +12,6 @@ This workshop is in development and not yet complete.
 
 This workshop will provide an overview of how to create simple, static reference maps to accompany academic publications. We will use [QGIS](https://qgis.org/), a free and open-source Geographic Information System (GIS) for analyzing, modifying, and visualizing spatial data.  
 
-Why make your own reference map? While maps of your research area may already exist, they often have licenses that prohibit their republication elsewhere. Alternatively, you might want to show a location specific to your research, or mark the sites where fieldwork was conducted. Although the use of existing maps is frequently restricted, the data that created them is often readily available. This means you can make your own map with it!
-
 This workshop is geared towards mapping novices. If you want to create  a map that geographically contextualizes your study area, or have a project involving data with a spatial component you're eager to visualize, this workshop is for you.  While making such maps on your own can feel daunting, this workshop will give you the confidence to:
 
 - Decide what kind of map best conveys your research or contextualizes your study area;
@@ -23,15 +21,9 @@ This workshop is geared towards mapping novices. If you want to create  a map th
 - Export this map into formats compatible with print and digital publication.
 <br>
 
-<!--
 
-![canada map](./content/images/canada-map-demo.jpeg)
-![canada map](./content/images/canada-map-multicolored.jpeg)
-
-![native land map](./content/images/native-land-map.jpeg) -->
 
 <!--carousel styling and code from W3schools-->
-
 <html>
 <link rel="stylesheet" href="./style.css">
 <div class="slideshow-container">
@@ -83,6 +75,10 @@ function showSlides(n) {
 </script>
 </html>
 
+
+
+Why make your own reference map? While maps of your research area may already exist, they often have licenses that prohibit their republication elsewhere. Alternatively, you might want to show a location specific to your research, or mark the sites where fieldwork was conducted. Although the use of existing maps is frequently restricted, the data that created them is often readily available. This means you can make your own map with it!
+
 ---
 
 ## Audience
@@ -112,7 +108,7 @@ If you're coming to this workshop with your own data in-hand, be sure to move it
 - General Informational website for all things UBC GIS: [gis.ubc.ca](http://gis.ubc.ca/)
 - UBC Library guide for finding and working with GIS resources: [guides.library.ubc.ca/gis](http://guides.library.ubc.ca/gis)
 - Archive of [Research Commons workshops](https://ubc-library-rc.github.io/)
-- Research Commons [Events Calender](https://researchcommons.library.ubc.ca/workshops/) for upcoming facilitated workshops
+- Research Commons [Events Calender](https://researchcommons.library.ubc.ca/events/) for upcoming facilitated workshops
 - Contact UBC Library’s Geospatial team: `library.gis@ubc.ca`
 - Schedule a 1:1 consult with the geospatial team [here](https://libcal.library.ubc.ca/appointments/research_commons#s-lc-public-pt)
 
