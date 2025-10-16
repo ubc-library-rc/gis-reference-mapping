@@ -9,10 +9,10 @@ Another kind of map is a **thematic map**. Writes Statistics Canada: “A themat
 
 > the process of manipulating spatial information to extract new information and meaning from the original data. Usually spatial analysis is carried out with a Geographic Information System (GIS). A GIS usually provides spatial analysis tools for calculating feature statistics and carrying out geoprocessing activities such as data interpolation.
 
-<!-- >> see other workshops like intro and tools and workflows for data modification, selects, etc. if you need to do processing/calculations to your spatial data before youre ready to symbolize it.  -->
-If you have spatial questions you want to explore with your data, you’ll likely need to perform some kind of spatial analysis within a GIS. If you are still designing your project and unsure as to your output, check out the Research Common's [Designing Spatial Stories](https://ubc-library-rc.github.io/gis-spatial-stories/) workshop, email the Geospatial team at `library.gis@ubc.ca`, or [book a consult](https://libcal.library.ubc.ca/appointments/research_commons#s-lc-public-pt).
+If you have spatial questions you want to explore with your data, you’ll likely need to perform some kind of spatial analysis within a GIS. Check out [Map Production with QGIS](https://ubc-library-rc.github.io/gis-intro-qgis/) and [Tools and Workflows in QGIS](https://ubc-library-rc.github.io/gis-tools-workflows/) for more on data modification, spatial selections, attribute table calculations, and geoprocessing. If you are still designing your project and unsure as to your output, check out the Research Common's [Designing Spatial Stories](https://ubc-library-rc.github.io/gis-spatial-stories/) workshop, email the Geospatial team at `library.gis@ubc.ca`, or [book a consult](https://libcal.library.ubc.ca/appointments/research_commons#s-lc-public-pt).
 
-Below are examples of different thematic maps, all visualizing chestnut street trees by Vancouver neighborhoods. The Hands-On section of this workshop contains documentation for making each kind of thematic map below.
+Below are examples of different thematic maps, all visualizing chestnut street trees by Vancouver neighborhoods. While today's workshop focuses on making simple static *reference maps* for academic publication, the additional optional content under Hands-On contains documentation for making each kind of thematic map below.
+
 <br>
 
 ## Choropleth maps
@@ -41,19 +41,6 @@ Note: In most cases you *do not* normalize values when using proportional symbol
 <!-- https://schoolofcities.github.io/urban-data-storytelling/urban-data-visualization/proportional-symbol-maps/proportional-symbol-maps.html -->
 
 
-You can make proportional symbol maps in QGIS simply by converting polygons to centroids (if not already points) and then going to symbology and choosing Graduated. Alternatively, if you want to spend extensive time styling your map and proportional symbols manually, you can export centroids (and other geographic layers) as an `.svg` file and open it in an illustration software like Adobe Illustrator or [Inkscape](https://inkscape.org/). The formula for *radius* of proportional symbols in absolute scaling is as follows: 
-> r<sub>C</sub> = (v<sub>C</sub> / v<sub>L</sub>) <sup>0.5</sup> * r<sub>L</sub>
-<br>
-
-> where r<sub>C</sub> is the radius of the circle to be calculated,<br>
-> r<sub>L</sub> is the radius of the largest circle,<br>
-> v<sub>C</sub> is the data value of the circle to be calculated, and<br>
-> v<sub>L</sub> is the data value of the largest circle<br>
-
-For perceptual scaling, increase the exponent to 0.57.   
-
-Note: The language for this formula is from GEOS372 Cartography Lab 6 by Dawn Mooney. 
-
 ---- 
 
 
@@ -67,6 +54,8 @@ Useful to show the concentration and distribution of discrete incidents. Each do
 ## Heatmaps
 Useful to show intensity or frequency of occurrence. Heatmaps can be thought about as generalized dot density maps. 
 ![heat map](./images/chestnut-heatmap.jpeg)
+
+---
 
 ## Cartograms 
 Cartograms distort area to emphasize the value associated with a geographic region. When using cartograms, it's important to consider whether your audience is already familiar with the un-distorted  geography, otherwise they might not glean the added information. 

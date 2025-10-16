@@ -96,7 +96,7 @@ Finally, if you don't know what kind of output you want just yet, we encourage y
 
 [Download Workshop Data](./reference-mapping-workshop.zip){: .btn .btn-blue }
 
-If you're coming to this workshop with your own data in-hand, be sure to move it inside the unzipped workshop data folder. Additionally, make sure it is either in a spatial data format (such as Esri Shapefile, `.shp`, or geoJSON, `.geojson`), or saved as a `.csv`. For the purposes of this workshop, your dataset must have coordinate information saved in two separate columns, one for latitude and one for longitude. If you only have cities/countries or street addresses, follow the link in the resources below to book a 1:1 consult for additional support. If you have street addresses, you can also _geocode_ these in QGIS (see [here](https://ubc-library-rc.github.io/gis-plugins-qgis/content/geocoding.html) for documentation.)
+If you're coming to this workshop with your own data in-hand, be sure to move it inside the unzipped workshop data folder. Additionally, make sure it is either in a spatial data format (such as Esri Shapefile, `.shp`, or geoJSON, `.geojson`), or saved as a `.csv`. For the purposes of this workshop, if your data is in `.csv` format it _must_ have coordinate information saved in two separate columns, one for latitude and one for longitude. If you only have cities/countries or street addresses, follow the link in the resources below to book a 1:1 consult for additional support. If you have street addresses, you can also _geocode_ these in QGIS (see [here](https://ubc-library-rc.github.io/gis-plugins-qgis/content/geocoding.html) for documentation.)
 {: .note}
 
 <br>
