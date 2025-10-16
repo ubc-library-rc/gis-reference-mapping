@@ -1,13 +1,13 @@
 ---
 layout: default
-title: 2. Project Set-up
+title: 2. Project Set up
 nav_order: 2
 parent: Hands On
 ---
 # Setting up a QGIS Project 
 {: .no_toc}
 
-To begin the Hands-On portion of this workshop, we will open and setup the QGIS project. This page will introduce you to the QGIS interface, and guide you through loading data, setting the project properties, managing your layers, and creating spatial bookmarks. 
+To begin the Hands-On portion of this workshop, we will open and set up the QGIS project. This page will introduce you to the QGIS interface, and guide you through loading data, setting the project properties, managing your layers, and creating spatial bookmarks. 
 
 
 
@@ -23,49 +23,49 @@ To begin the Hands-On portion of this workshop, we will open and setup the QGIS 
 
 ## The interface at a glance
 
-In your workshop folder, open the file called `reference-mapping-workshop_YOURNAME.qgz`. If you have sucessfully downloaded and installed QGIS on your computer, this file should open in the application. If need be, click New Empty Project. 
+In your workshop folder, open the file called `reference-mapping-workshop_YOURNAME.qgz`. If you have successfully downloaded and installed QGIS on your computer, this file should open in the application. (If need be, click New Empty Project.)
 
 
 ![qgis project](./images/qgis-project_20250911.png)
 
 
-- **Menus** At the very top of your screen you'll see menus which, when clicked on, expand with many options. Notice that these menus are only visible when you've clicked into the QGIS application. Though you can drag the application interface around your screen, the menus stay at the top. If you click out of the QGIS application they will disappear. These menus provide easy access to a variety of tools you'll use in your everyday mapping, but some time to become familiar with. 
+- **Menus** At the very top of your screen you'll see menus which, when clicked on, expand to show many more options and even sub-menus. Notice that these menus are only visible when you've clicked into the QGIS application. Though you can drag the application interface around your screen, the menus stay at the top. If you click out of the QGIS application, the menu will disappear. These menus provide easy access to a variety of tools you'll use in your everyday mapping. Like any new interface, it may take some time to become familiar with what's stored where. 
 
-- **Toolbars** - Toolbars are where you will find the most useful geoprocessing, editing, navigation, and other tools. You can customize this area of your GUI to fit your needs.
+- **Toolbars** - The toolbar is the area at the top of your QGIS application with all the icons. The toolbar actually contains multiple toolbars, which are groups of icons that, when clicked, allow you to navigate around your map canvas, make click-based selections, edit layer geometries, create spatial bookmarks, and much more. You can customize this area of your GUI to fit your needs, adding and removing sets of tools by clicking on the great area of the toolbar.
 
-- **Browser and Layers Panel** - The browser panel lets you easily navigate your file system for data and project files. Your layers panel displays your project’s data layers and provides access to configuration settings. If you ever accidentally close a Panel, you can open it again by going to the View Menu at the top of your screen, down to Panels and then selecting the ones you wish. You can also right-click anywhere in the toolbar’s greyspace and select Panels and Toolbars to show/hide.
+- **Browser and Layers Panel** - When you open the project prepared for you, you should see two panels on the left-hand side of your interface. The browser panel lets you easily navigate your file system for data and project files. Your layers panel displays your project’s data layers and provides access to configuration settings. If you ever accidentally close a Panel, you can open it again by going to the View menu at the top of your screen, down to Panels, and then selecting the ones you wish. You can also right-click anywhere in the toolbar’s greyspace and select the Panels and Toolbars you want to show or hide.
 
 - **Status Bar** - The status bar displays current information about the map canvas, and allows you to make adjustments in the map’s scale and rotation.
 
-- **Map Canvas or Map View** - Call it either one. This is where the map is displayed as layers are loaded. You can zoom/pan the map canvas as well as select features and other operations.
+- **Map Canvas or Map View** - Call it either one. This is where the map is displayed and updated as layers are loaded. You can zoom/pan the map canvas as well as select features and other operations. 
 
 You can change the look and feel of your GUI, as well as adjust default settings from the menu **QGIS-LTR --> Preferences** or the menu **Settings --> Options.** To increase the size of icons and text on your interface, go to the **Settings** menu at the top of your screen and click on **Options**. Then, resize the dialogue box so you can see the drop-down for "icon size" and "font." Icon changes will happen as soon as you click OK. Changes in font size won't update until you quit and restart QGIS, so make sure you save your project now. 
    
 ---- 
 
 ## Loading Data 
-Once you’ve gathered your relevant data, the next step is to add it to a QGIS project. There are a couple ways to add data to your map canvas. 
+Once you’ve gathered relevant data, the next step is to add it to a QGIS project. There are a couple ways to add data to your map canvas. 
 
 - **Browser panel** From the Browser panel, likely docked to the left of your screen, expand the `Home` directory (aka folder) and navigate to your workshop data folder. Expand that folder to see the data inside, then double-click or drag and drop each file to add it to your project. Alternatively, you can add a **Favorite** connection in the Browser panel to save you the trouble of finding your data folder. To do this, click “Favorites” at the top of the Browser panel's list and connect the workshop data folder as a favorite directory. Make sure not to click *into*, merely select it. 
 - **Data Source Manager** The Data Source Manager is the same sort of portal as the Browser, just in a separate dialogue box rather than a docked panel. You can open the Data Source Manager by double-clicking the 3 colorful squares icon in the Toolbar, or from the Layer menu at the top of your screen.
 - **Layer menu** A third way to add layers to your map canvas is through the Layer menu at the top of your screen. Under Layer, navigate to **Add Layer** (it should be the third item down) and select Add Vector Layer... or Add Raster Layer.... This will open the same Data Source Manager dialogue box as before.
-- **Drag and drop** files from your data folder directly onto your map canvas.      
+- **Drag and drop** files from your data folder directly onto your map canvas. This method is not recommended as it can easily lead to data disorganization. 
 
 To Do
 {: .label .label-green }
-Add the layers to your map in the following order
+Add the layers to your map *in the following order*
 1. `ne_50m_ocean.shp` (World Oceans at medium scale from Natural Earth)
 2. `ne_50m_admin_0_countries.shp` (World Countries at medium scale from Natural Earth)
 3. `lpr_000b16a_e.shp` (Canadian Provinces from Statistics Canada)
 4. `ne_50m_lakes.shp` (World Lakes and Reservoirs at medium scale from Natural Earth)
 
-Zoom into canada. The symbology, or coloring of each layer is random. We will change these in the next page. 
+Zoom into canada. The symbology, or coloring of each layer is random. We will change these in the next section. 
 
 <!-- ![data added](./images/data-added_20250915.png) -->
 ![data added](./images/data-added2_20250915.png)
 
   
-Now and `native-land-territories.geojson` (Indigenous territories downloaded from Native Land Digital using their API)
+Now add `native-land-territories.geojson` (Indigenous territories downloaded from Native Land Digital using their API)
 
 <img src="./images/canada-zoom1-WGS84_20250915.png" style="width:49%">
 <img src="./images/canada-zoom2-WGS84_20250915.png" style="width:49%">
@@ -74,20 +74,26 @@ Now and `native-land-territories.geojson` (Indigenous territories downloaded fro
 If for any reason you weren't able to download the necessary data, those files will be in the `backup-data` folder. Just remember to unzip them. Your map canvas should look something like this now. 
 {: .note}
 
+Note, too, that your data isn't saved _inside_ your QGIS project. Rather, the *filepath connections* are saved, as well as any modifications to symbology made to the layers in QGIS. When mapping in QGIS, it's important to keep track of where the data you're working with is stored. If you move your data, QGIS won't know where to look for it and a red exclamation mark will appear in the Layers Panel. You can click on this warning to tell QGIS where the data is now stored. 
+{: .note}
+
+
+ 
+
 ----
 
 ## Project Properties
-You can access the Project Properties from the the **Project** menu. Click down to **CRS**. CRS stands for Coordinate Reference System, and describes the mechanics behind the 3-dimensional Earth's transformation to fit on 2-dimensional screens. A projection is part of the Coordinate Reference System, and is responsible for projecting a set of points from a 3-dimensional space onto a 2-dimensional plane. There are a variety of projections, each one preserving some characteristics of shape, area, distance, and direction, while distorting others. When choosing the best projection for your map, it is important to consider the content you are visualizing and the extent of the geographic area. Every spatial data layer comes with its own stored projection, often noted at the point of download. If you don't set a projection at the start, your QGIS project will assume the projection of the first layer you add. 
+You can access the Project Properties from the the **Project** menu. Click down to **CRS**. CRS stands for Coordinate Reference System, and describes the mathematics behind transforming a 3-dimensional Earth to fit on a 2-dimensional screen. A projection is part of the Coordinate Reference System, and is responsible for projecting a set of points from a 3-dimensional space onto a 2-dimensional plane. There are a variety of projections, each one preserving some characteristics of shape, area, distance, and direction, while distorting others. When choosing the best projection for your map, it is important to consider the content you are visualizing and the extent of the geographic area. Every spatial data layer comes with its own stored projection, often noted at the point of download. Note: If you don't set a projection at the start, your QGIS project will assume the projection of the first layer you add. 
 
 To Do
 {: .label .label-green }
 
-For today's workshop and mapping Canada, we will use the CRS: `NAD83 / Statistics Canada Lambert`. This will preserve direction and shape which is important as we are mapping a large geographic area that is quite close to the north pole. You can try different projections to see how they change the map but be sure to set your project CRS to `NAD83 / Statistics Canada Lambert` in the end. 
+For today's workshop mapping Canada, we will use the CRS: `NAD83 / Statistics Canada Lambert`. This will preserve direction and shape which is important as we are mapping a large geographic area that is quite close to the north pole. You can try different projections to see how they change the map, but be sure to set your project CRS to `NAD83 / Statistics Canada Lambert` in the end. 
 
 ![projection](./images/project-properties_20250915.png)
     
 
-You'll notice this changes how the map looks. 
+You'll notice setting the project projection changes how the layers are rendered.
 
 <img src="./images/canada-zoom-NAD83Lambert_20250915.png" style="width:100%">
 
@@ -154,7 +160,7 @@ Make a spatial bookmark of Canada. If you've already zoomed to the provinces lay
 
 <br>
 
-You are now setup to begin mapping! Be sure to SAVE YOUR PROJECT before continuing on. Save from either the save icon in your toolbar or from the Project menu --> Save. 
+You are now setup to begin mapping! Be sure to **SAVE YOUR PROJECT** before continuing on. Save from either the save icon in your toolbar or from the Project menu --> Save. 
 
 
 
