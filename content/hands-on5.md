@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 5. Basemaps (Optional)
+title: 5. Basemaps 
 nav_order: 5
-parent: Hands On
+parent: Additional Content
 ---
 
 # Basemaps

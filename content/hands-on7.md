@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 7. Insets (Optional)
+title: 7. Insets
 nav_order: 7
-parent: Hands On
+parent: Additional Content
 ---
 # Insets
 
