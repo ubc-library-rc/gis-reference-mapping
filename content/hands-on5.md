@@ -6,7 +6,7 @@ parent: Additional Content
 ---
 
 # Basemaps
-A basemap is helpful to give spatial context to your data as you work. One way to add a basemap. You can also create a reference map that is simply a basemap. The following page will guide you through adding basemaps to your QGIS project. 
+A basemap is helpful to give spatial context to your data layers—both as you're working and in your final map. You can also create a reference map that is simply a basemap. For example, the map made over the course of this workshop used Natural Earth data to show the countries surrounding Canada. Another way to add geographic context is through a web-based basemap. Web-based basemaps are maps of the whole world that are stored on servers and which you can add to your project without downloading them to your local computer. The following page will guide you through adding web-based basemaps to your QGIS project. 
  
 
 ## Adding basemaps from web plugin
@@ -48,9 +48,9 @@ If you find web-based maps interesting, check out the Research Commons' [Leaflet
 
 
 
-## Making a map
+## Making a map from a basemap
 
-Considerations. Then documentation. 
+To use a basemap as your final reference map, simply turn off or remove all other layers. Create a new Print Layout and add your map. Be sure to include a source statement at the bottom. Be sure to check the license of any basemap before using it for academic publication. 
 
 <img src="./images/ubc-campus-demo.jpeg" style="width:55%">
 
