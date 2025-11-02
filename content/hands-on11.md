@@ -1,15 +1,14 @@
 ---
 layout: default
-title: 11. Heatmaps
+title: 11. Cartograms
 nav_order: 11
 parent: Additional Content
 ---
-# Thematic Mapping - Heatmaps
+# Thematic Mapping - Cartograms
 
-Heatmaps are useful to show intensity or frequency of occurrence. Heatmaps can be thought about as generalized dot density maps. 
+Cartograms distort area to emphasize the value associated with a geographic region. When using cartograms, it's important to consider whether your audience is already familiar with the un-distorted  geography, otherwise they might not glean the added information. 
+![cartogram map](./images/chestnut-cartogram-map.jpeg)
 
-![heat map](./images/chestnut-heatmap.jpeg)
+----
 
----
-
-## Making a heatmap
+## Making a cartogram
