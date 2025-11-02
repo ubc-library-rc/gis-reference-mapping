@@ -80,8 +80,19 @@ Play around with different classification modes. You can also create your own in
 
 
 
+### Adding a Legend
+In a Print Layout, add a legend from the *Add Items** menu at the top of your screen. Only features symbolized by your map should be included in your legend. To remove extraneous layers and rename existing layers, first **uncheck the ‘Auto update’ box.** Now select a layer you want to remove from your legend and click the red –– button at the bottom. To rename a layer, simply double click it. Click the < back arrow to return to Legend Item Properties
+
+You can add a Background or Frame to your Legend by scrolling down in the Item properties. Note that a legend does not need a title "Legend".
+
+<img src="./images/choropleth-legend_20251102.png" style="width:80%">
 
 
+
+![add legend gif](./images/choropleth-legend_20251102.gif)
+
+
+Note: If you have many layers you don't want to include in your legend because they aren't part of your map, but aren't ready to remove from your project, you can create a group in the Layers Panel and add them there. That way, when it's time to edit the legend, you can remove the entire group. 
 
 
  
