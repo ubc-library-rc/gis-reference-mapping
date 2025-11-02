@@ -23,7 +23,7 @@ The map below shows total chestnut street trees per Vancouver neighborhood.
 
 ## Making a choropleth map 
 
-*1*{: .circle .circle-yellow} `.circle-yellow` Add the file `chestnut-count.geojson` from within the thematic-mapping subfolder of your workshop data folder. Zoom-to the layer. (If your map looks wonky, be sure you've set the project CRS to `NAD83 / UTM zone 10N` from Project menu --> Properties --> CRS.)
+*1*{: .circle .circle-yellow}  Add the file `chestnut-count.geojson` from within the thematic-mapping subfolder of your workshop data folder. Zoom-to the layer. (If your map looks wonky, be sure you've set the project CRS to `NAD83 / UTM zone 10N` from Project menu --> Properties --> CRS.)
 
 <img src="./images/choropleth-default_20251102.png" style="width:100%">
 
@@ -77,10 +77,24 @@ If you toggle to the **Histogram** tab, you can **Load Values** to see the distr
 
 Play around with different classification modes. You can also create your own intervals manually by simply double clicking the values and editing the number bounds. Or, you can adjust a given classification mode by dragging the class lines in the histogram.
 
+<br>
 
 
+## Styling your choropleth map
 
-### Adding a Legend
+You can save and load symbology styles. Try loading the symbology style, stored in the thematic-mapping subfolder, called `gradient-style.qmd`. 
+
+<img src="./images/cartogram-load-style_20251102.png" style="width:90%">
+
+
+<img src="./images/cartogram-style-filepath_20251102.png" style="width:50%">
+
+
+<img src="./images/cartogram-style-loaded_20251102.png" style="width:80%">
+
+<br><br>
+
+## Adding a Legend
 In a Print Layout, add a legend from the *Add Items** menu at the top of your screen. Only features symbolized by your map should be included in your legend. To remove extraneous layers and rename existing layers, first **uncheck the ‘Auto update’ box.** Now select a layer you want to remove from your legend and click the red –– button at the bottom. To rename a layer, simply double click it. Click the < back arrow to return to Legend Item Properties
 
 You can add a Background or Frame to your Legend by scrolling down in the Item properties. Note that a legend does not need a title "Legend".
