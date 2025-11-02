@@ -7,9 +7,10 @@ parent: Hands On
 # Modifying Layers
 {: .no_toc}
 
-As they are, the layers aren't particularly aesthetic, nor is foreground adequately differentiated from background. This page will guide you through modifying your layers' symbology to create a more polished looking map. 
+As they are, the layers we've added to our map canvas aren't particularly aesthetic, nor is foreground adequately differentiated from background. This page will guide you through modifying your layers' symbology to create a more polished looking map where what's deemed important stands out. 
 
-<!-- as well as note some considerations for mapping for academic publication.  -->
+This page will also note some considerations specific to mapping for academic publication. 
+
 
 
 <details open markdown="block">
@@ -151,9 +152,11 @@ While more comprehensive design work on your map can be managed in an illustrati
 
 To Do
 {: .label .label-green }
-While there is more to Visual Hierarchy, that is enough to get you started. Take 5 minutes to change symbology of each layer with visual hierarchy in mind. You may choose to symbolize Canadian provinces & territories as a single symbol, or as categorized symbols.
+While there is more to Visual Hierarchy, that is enough to get you started. Take 5-10 minutes to change symbology of each layer with visual hierarchy in mind. You may choose to symbolize Canadian provinces & territories as a single symbol, or as categorized symbols.
 
-(You'll have another 5-10 minutes to work so after print layout and items are introduced in the next page.)
+<!--show different canadas-->
+
+
 
 
 <!-- .add about saving styles etc. and labelling by filters etc.  -->
