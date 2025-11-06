@@ -1,114 +1,65 @@
 ---
 layout: default
-title: 8. Choropleth Maps
+title: 8. Selections 
 nav_order: 8
 parent: Additional Content
 ---
-# Thematic Mapping
+# Selections 
+Perhaps you only want to use a portion of the data downloaded, such as a specific province or country. This extended tutorial will show you how to run selections on your data from inside QGIS, and export selected features as a new dataset. 
 
-The following pages will guide you through how to adjust your symbology in QGIS to make a thematic map. The data is already prepared for you in the `thematic-mapping` subfolder of your workshop data folder. Before you begin,
-1. Be sure to remove or hide all global layers, and
-2. Change the project's **CRS** to `NAD83 / UTM zone 10N`.
-3. Having a web-based basemap for reference can be helpful as well. 
-4. If the `reference-mapping-workshop` data folder is not already connected as a favorite directory in your Browser Panel, connect it now. 
+### Case Scenario: Map of British Columbia
+Say you wanted to create a map of British Columbia, where the rest of the Canadian provinces serve as the basemap. You probably want to style British Columbia differently than the other provinces, which is difficult to do when they are all one data layer. 
 
-## Choropleth maps
-Choropleth maps are useful to show and compare the density, frequency, or quantity of a value generalized across standardized geographic areas (such as zip-codes, provinces, or countries). Unless you specifically want to emphasize differences in total number of events/data points, it is best practice to normalize your data when choropleth mapping. Normalization is when you divide the values for each geographic area by something like the area in square kilometers or total population of that area. For instance, mapping winter flu cases across census tracts in British Columbia, you'd want to normalize the total cases in each census tract by that tract's total population. Normalization enables better comparison across multiple geographic areas. 
+One solution is to create a new data layer that is *just* British Columbia. We can do this by running a simple select and exporting this selection to a new file. 
 
-The map below shows total chestnut street trees per Vancouver neighborhood.  
+## Select features
+There are many kinds of selections you can run, and many ways to go about selecting. When the goal is to select a polygon feature, the easiest is to just select it by clicking. In your toolbar, there should be a set of selection tools. If not, right-click on the toolbar greyspace and add the Selection Toolbar. 
 
-![chropleth map](./images/chestnut-choropleth-map.jpeg)
+Click on the first icon, "Select features by area or single click".
+
+<img src="./images/selection-tool_20251102.png" style="width:100%">
+
+
+Then, with the Select tool activated, click on British Columbia. It should become highlighted. 
+
+- If you open the Attribute Table of `Provinces`, you should see British Columbia is also highlighted there. Note that selections only work on layers that are turned on. Not also that while British Columbia was selected, the `Countries` layer beneath it was not. In order to select a layer it must be visible and selected in the Layers Panel.  
+
+<img src="./images/selection-highlighted_20251102.png" style="width:100%">
+
+
+## Export selection
+Once you've selected British Columbia, you can Export your selection as a new file. Right click `Provinces` in the Layers Panel and go to **Export --> Save selected features as...**. Be sure to give your new layer both a name *and* location. Your new layer of just British Columbia should automatically load to your QGIS project. If it doesn't, add it now. 
+
+<img src="./images/selection-export_20251102.png" style="width:100%">
+
+
+Importantly, you must now cancel your selection on the `Provinces` layer. Then, click hand icon to return your cursor the pan map tool. This will ensure you don't make more unintentional selections. 
+
+<img src="./images/selection-cancel_20251102.png" style="width:100%">
+
+<br>
+
+## To adjust or not to adjust projections
+Notice that when you zoom-in to British Columbia, the province might seem to be rotated at an angle. That's because your project is still likely set to a projection that works well for the entire country, but not so well for a single province. 
+
+<img src="./images/bc-zoom_20251102.png" style="width:80%">
+
+From the **Project** menu go to **Properties** and change the project's **CRS** to `NAD83 / UTM zone 10N`. Zoom to British Columbia again. You may need to use the zoom tools to properly zoom in. 
+
+<img src="./images/bc-reprojected_20251102.png" style="width:80%">
+
+Now however, you'll notice the ocean has disappeared and is now symbolizing the surrounding countries layer. Go ahead and zoom-to the `Ocean` layer to see what happened. Essentially, when we changed the project's CRS from something that worked for world-wide layers to a projection that suited British Columbia specifically, it distorted the other layers including `Ocean`, `Countries` and `Lakes`. 
+
+<img src="./images/ocean-distorted_20251102.png" style="width:80%">
+
+You have a couple of options. Because everything except oceans is visible when you zoom close to British Columbia, you could just choose to exclude oceans and add a background color instead to simulate the ocean. Or, you could change the project projection back to `NAD83 / Statistics Canada Lambert`. 
+
+## Map styling
+Now you can style British Columbia with visual hierarchy in mind. 
+
+<img src="./images/selection-styling_20251102.png" style="width:80%">
+<br>
 
 ----
 
-## Making a choropleth map 
-
-*1*{: .circle .circle-yellow}  Add the file `chestnut-count.geojson` from within the thematic-mapping subfolder of your workshop data folder. Zoom-to the layer. (If your map looks wonky, be sure you've set the project CRS to `NAD83 / UTM zone 10N` from Project menu --> Properties --> CRS.)
-
-<img src="./images/choropleth-default_20251102.png" style="width:100%">
-
-<br>
-
-*2*{: .circle .circle-yellow} The default color may differ in your QGIS project, but once loaded, your layer will something like this. The layer shows Vancouver neighborhoods, but just by looking at it, we can't tell much more. Open the **Attribute Table** of the newly added `chestnut-count` layer. 
-
-<img src="./images/choropleth-attribute-table_20251102.png" style="width:80%">
-
-Here we can see there are three Fields, one for the neighborhood name, one for its geometry, and a final column storing the number of total chestnut street trees in each neighborhood. *We know this is stored as a number because the contents of this column are right justified.* 
-
-If you are interested in how these counts were calculated, see our [Introduction to QGIS](https://ubc-library-rc.github.io/gis-intro-qgis/) which will take you step-by-step through creating this dataset. 
-
-<br>
-
-*3*{: .circle .circle-yellow} Remember, a choropleth map visualizes different values across standard geographic areas through gradations in color. So, what we need to do is change the **Symbology** of the `chestnut-count` layer to render visible values in the `chestnut-trees` column.
-
-- Open the layer Symbology of `chestnut-count` (Right-click the layer in the Layers Panel --> Properties --> Symbology). 
-
-- At the top of the **Layer Properties - Symbology** window, we can see the layer `chestnut-count` is currently being symbolized by a **Single Symbol**. Click **Single Symbol** to change this. From the drop-down options that appear, select **Graduated**.
-
-<img src="./images/choropleth-layer-properties_20251102.png" style="width:80%">
-
-<br>
-
-*4*{: .circle .circle-yellow} Now we have to indicate what value the layer should be used to build the symbology gradient. Because `chestnut-trees` is the only numerical field in the Attribute Table, when you click the drop-down options for **Value**, `chestnut-trees` is the only value you can choose. Choose it. 
-
-<br>
-
-*5*{: .circle .circle-yellow} **Precision** refers to how many decimals you want to include, and checking the **Trim** box removes trailing zeros from the legend. Because we are dealing with whole numbers of trees, so long as **Trim** is checked it doesn't matter the precision.
-
-    
-<br>
-
-*6*{: .circle .circle-yellow} You can select a color ramp from the given options, or design your own. Hover over "All Color Ramps" to see all options. For now, change the color ramp to `oranges` from All Color Ramps.  
-
-
-<br>
-
-*7*{: .circle .circle-yellow} So far, we've set up the symbology but we have to apply it to our values. Click **Classify** to classify the `chestnut-trees` values. (If nothing shows up, make sure you've set the **Value** to the numerical field `chestnut-count`.)
-
-<img src="./images/choropleth-classify_20251102.png" style="width:80%">
-
-
-Hit **Apply** to see you map change. 
-
-While the default classification mode is set to **Equal Count (Quantile)**, you can choose amongst different classification modes. Classification modes determine how the distribution of data are grouped or "classified", and therefore which values are associated with which colors. You can also increase or decrease the number of classes. Between 5 and 7 is best practice. Read more about different classification modes [here](https://pro.arcgis.com/en/pro-app/latest/help/mapping/layer-properties/data-classification-methods.htm). 
-
-If you toggle to the **Histogram** tab, you can **Load Values** to see the distribution of `chestnut-trees` values. The X-axis indicates number of chestnut trees whereas the Y-axis, "Count", refers to the number of neighborhoods with this number of chestnut trees. The number of bins refers to how granularly the number line is broken down. Currently there are 30 bins—from 0 to 400—meaning any neighborhood with a count that isn't a multiple of 5 will be split. 
-
-
-Play around with different classification modes. You can also create your own intervals manually by simply double clicking the values and editing the number bounds. Or, you can adjust a given classification mode by dragging the class lines in the histogram.
-
-<br>
-
-
-## Styling your choropleth map
-
-You can save and load symbology styles. Try loading the symbology style, stored in the thematic-mapping subfolder, called `gradient-style.qmd`. 
-
-<img src="./images/cartogram-load-style_20251102.png" style="width:90%">
-
-
-<img src="./images/cartogram-style-filepath_20251102.png" style="width:50%">
-
-
-<img src="./images/cartogram-style-loaded_20251102.png" style="width:80%">
-
-<br><br>
-
-## Adding a Legend
-In a Print Layout, add a legend from the *Add Items** menu at the top of your screen. Only features symbolized by your map should be included in your legend. To remove extraneous layers and rename existing layers, first **uncheck the ‘Auto update’ box.** Now select a layer you want to remove from your legend and click the red –– button at the bottom. To rename a layer, simply double click it. Click the < back arrow to return to Legend Item Properties
-
-You can add a Background or Frame to your Legend by scrolling down in the Item properties. Note that a legend does not need a title "Legend".
-
-<img src="./images/choropleth-legend_20251102.png" style="width:80%">
-
-
-
-![add legend gif](./images/choropleth-legend_20251102.gif)
-
-
-Note: If you have many layers you don't want to include in your legend because they aren't part of your map, but aren't ready to remove from your project, you can create a group in the Layers Panel and add them there. That way, when it's time to edit the legend, you can remove the entire group. 
-
-
- 
-
-
+<!-- ## Alternative - style by expression -->

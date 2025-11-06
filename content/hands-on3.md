@@ -25,14 +25,14 @@ This page will also note some considerations specific to mapping for academic pu
 
 
 ## Attribute Table
-The attribute table contains the tabular data associated with a layer. Though not relevant to our simple reference map today, it is important you know what the Attribute Table is and how to access it. To open a layer's attribute table, right-click the layer in the Layers Panel and go to "Open Attribute Table". For more experience in with the attribute table, you are encouraged to explore our [Intro to QGIS](https://ubc-library-rc.github.io/gis-intro-qgis/) and [Tools and Workflows in QGIS](https://ubc-library-rc.github.io/gis-tools-workflows/) beginner workshops.
+The **Attribute Table** contains the tabular data associated with a layer. Though not relevant to today's focus on reference mapping, it is important you know what the attribute table is, and how to access it. To open a layer's attribute table, right-click the layer in the Layers Panel and go to "Open Attribute Table". For more experience in with the attribute table, you are encouraged to explore our [Intro to QGIS](https://ubc-library-rc.github.io/gis-intro-qgis/) and [Tools and Workflows in QGIS](https://ubc-library-rc.github.io/gis-tools-workflows/) beginner workshops.
 
 To Do
 {: .label .label-green }
 Open the attribute table of the `Provinces` layer. 
 Note that there are several attributes (columns) that describe each feature (row) in this dataset. Manually re-size the column widths until you can read each attribute.
 
-<img src="./images/attribute-table_20250915.png" style="width:80%">
+<img src="./images/attribute-table_20250915.png" style="width:90%">
 
 
 ## Layer Properties 
@@ -41,7 +41,7 @@ Just as the QGIS Project had Project Properties, each layer has properties of it
 
 
 ## Labelling 
-Two project properties we _will_ concern ourselves with are Labels and Symbology. Labels allow you to add labels to a layer based on an attribute value. You can turn off the labels at any time by returning to a layer's properties, or by right-clicking the layer and clicking "Show Labels" again. 
+Two project properties we _will_ concern ourselves with are **Labels** and **Symbology**. Labels allow you to add labels to a layer based on an attribute value. You can turn off the labels at any time by returning to a layer's properties, or by right-clicking the layer and clicking "Show Labels" again. 
 
 To Do
 {: .label .label-green }
@@ -55,7 +55,7 @@ Add provincial labels based on `PRENAME`. You can customize your labels by incre
 ## Symbology
 The other important layer property for reference mapping is Symbology. Symbology governs the outline and color fill of points, lines, and polygons. The symbology style for any given vector layer can be Single, Categorized, Graduated, etc. For now, let's stick with Single. This means that each layer will have a single symbology, or color/outline. 
 
-Depending on the audience and publisher of your reference map, you might have constraints such as Black and White. Keep this in mind. For now, we'll do color mapping but notes will be made... 
+Depending on the audience and publisher of your reference map, you might have constraints such as Black and White. Keep this in mind. For now, we'll map in color.
 
 To Do
 {: .label .label-green }
@@ -68,7 +68,7 @@ Change the color of the ocean.
 
 <img src="./images/symbology_20250915.png" style="width:90%">
 
-When changing color, if you want to make your map in Black & White, change the Color Model from RGB to CYMK. Then set everything but K to 0. You can also color sample by changing to the eye-dropper tab. 
+ If you want to make your map in Black & White, change the Color Model from RGB to CYMK. Then set everything but K to 0. You can also color sample from the eye-dropper tab. 
 
 <img src="./images/changing-color_20250915.png" style="width:65%">
 
@@ -83,7 +83,7 @@ Change the symbology for the Native Land dataset.
 
 <img src="./images/native-land-territories-symbology_20250915.png" style="width:100%">
 
-Currently, they are all random colors. You can click each color square beside the province to individually change its color. We won't attempt this, however, as there are too many classifications. Decreasing the layer's opacity (aka increasing its transparency) will allow the provinces or landforms to be seen beneath it. Try hiding the provinces for a moment. 
+Currently, each territory has a random color. You can click each color square beside the province to individually change its color. We won't attempt this, however, as there are too many features. Decreasing the layer's opacity (aka increasing its transparency) will allow the provinces or landforms to be seen beneath it. Try hiding the provinces for a moment. 
 
 <img src="./images/native-land-territories-categorized-symbology_20250915.png" style="width:100%">
 
@@ -115,29 +115,38 @@ Currently, they are all random colors. You can click each color square beside th
 
 Before changing any more symbology, let's talk about **Visual Hierarchy**. 
 
+----
 
 ## Visual hierarchy
 Visual hierarchy describes the order in which elements on a map grasp the viewer's attention. What elements do you want to prioritize and what is the order of importance? Maps can become busy places when everything is vying for attention. The following are considerations and techniques for foregrounding what's important, and backgrounding what's less so. 
 
 Note: Some of the elements mentioned below aren't things you currently have on your map, but rather items you'll add to your final map layout like a scalebar, north arrow, and legend. 
 
-- **Color** *Bright* and *dark* colors jump forwards, whereas pale and desaturated hues fade to the back. (When working in Black & White, think about your grayscale as a palette in and of itself.) First, decide whether darker colors will be your foreground or background. If there are multiple elements  Make either the background darker than the foreground, or foreground darker than the background. If there are multiple elements in the foreground, choose contrasting colors to distinguish them, or, choose similar colors to connect them. Likewise, choosing similar colors for backgrounded items like a data source statement and north arrow, can help minimize the number of colors the viewer has to interpret. Additionally, it can help to use the eyedropper color sampling option to match these elements' color to whatever they are on top of (like the ocean) and then simply make them a tad darker so they are visible still. Same thing with legend backgrounds and neatlines (borders around map items). 
+### **Color** 
+*Bright* and *dark* colors jump forwards, whereas pale and desaturated hues fade to the back. (When working in Black & White, think about your grayscale as a palette in and of itself.) First, decide whether darker colors will be your foreground or background. *If there are multiple elements, make either the background darker than the foreground, or foreground darker than the background.* 
 
-    - [ColorBrewer](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) is a fantastic resource for generating customized color palettes. [Coloring for Colorblindness](https://davidmathlogic.com/colorblind/#%23D81B60-%231E88E5-%23FFC107-%23004D40) will help you design colorblind-friendly palettes. 
+If there are multiple elements in the foreground, choose contrasting colors to distinguish them, or, choose similar colors to connect them. Likewise, choosing similar colors for backgrounded items like a data source statement and north arrow, can help minimize the number of colors the viewer has to interpret. Additionally, it can help to use the eyedropper color sampling option to match these elements' color to whatever they are on top of (like the ocean) and then simply make them a tad darker so they are visible still. Same with legend backgrounds and neatlines (borders around map items). 
 
-    - Be careful, however, not to make colors too light, lines to thin, or text too small. What appears contrasting on the computer screen will be less contrasting in print. Best practice is to have text size _at minimum_ 7pt, and line width _at minimum_ .3 or .5pt. Again, it depends on your medium of publication but if you plan to publish your maps in print, err on the side of darker, wider, and bigger. 
+-  [ColorBrewer](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) is a fantastic resource for generating customized color palettes. [Coloring for Colorblindness](https://davidmathlogic.com/colorblind/#%23D81B60-%231E88E5-%23FFC107-%23004D40) will help you design colorblind-friendly palettes. 
+
+Be careful, however, not to make colors too light, lines to thin, or text too small. What appears contrasting on the computer screen will be less contrasting in print. Best practice is to have text size _at minimum_ 7pt, and line width _at minimum_ .3 or .5pt. Again, it depends on your medium of publication but if you plan to publish your maps in print, err on the side of darker, wider, and bigger. 
 
     
+Can also use color for foreground and desaturated grey or brown for background - if you want colors to all be lighter and muted
 
-
-- **Outlines** An outline brings something to your attention, adding crispness to form. To send elements to the background, consider removing their outlines. A light-colored outline against a darker foregrounded element will help it stand out and vice versa. If both foreground and background are outlined, consider color matching by adding light-colored outlines to light objects, and dark outlines to darker objects.  light-colored outlines  Consider removing outlines from background layers, such as ocean, lakes, and countries. Consider adding a light outline to provinces of all once color, or removing alltogether if provinces symbolized in a categorized manner. 
+### **Outlines** 
+An outline brings something to your attention, adding crispness to form. To send elements to the background, consider removing their outlines. A light-colored outline against a darker foregrounded element will help it stand out and vice versa. If both foreground and background are outlined, consider color matching by adding light-colored outlines to light objects, and dark outlines to darker objects.  light-colored outlines  Consider removing outlines from background layers, such as ocean, lakes, and countries. Consider adding a light outline to provinces of all once color, or removing alltogether if provinces symbolized in a categorized manner. 
 
   <img src="./images/outline-example_20250917.jpeg" style="width:100%">
 
   <img src="./images/outline-example2_20250917.jpeg" style="width:100%">
 
-    
-- **Transparency** Transparency allows overlapping layers to be seen, as well as lightens the overall hue of a layer. Transparency helps elements fade into the background, like the backing of a legend or a north arrow. 
+
+-- outline around lakes 
+
+### **Transparency** 
+
+Transparency allows overlapping layers to be seen, as well as lightens the overall hue of a layer. Transparency helps elements fade into the background, like the backing of a legend or a north arrow. 
 
   <img src="./images/line-transparency_20250915.png" style="width:60%">
 

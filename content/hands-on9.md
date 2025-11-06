@@ -1,83 +1,59 @@
 ---
 layout: default
-title: 9. Proportional Symbol Maps
-nav_order: 9
+title: 7. Insets
+nav_order: 7
 parent: Additional Content
 ---
-# Proportional Symbol Maps
+# Insets
 
-Proportional symbol maps are useful to visualize the quantity of something across respective locations. Choropleth maps use a color gradient to convey value differentials, whereas proportional symbol maps use symbol size. Proportional symbols are quite intuitive, and can be combined with other parameters like color and lettering size to provide rich spatial information. Proportional symbols can even be layered atop a choropleth map. See [Axis Maps](https://www.axismaps.com/guide/proportional-symbols) for a guide to proportional symbol maps. 
+Insets are maps nested within maps which either zoom-in to show a particular area in greater detail, or zoom-out to contextualize the area of interest within broader geographical context. 
 
-Note: In most cases you *do not* normalize values when using proportional symbols, as that would reduce the range in difference. If anything, it can be useful to exaggerate the range slightly. While Absolute Scaling renders symbols increasingly larger along a linear scale, Perceptual/Apparent Scaling compensates for the eye's tendency to reduce difference in sizes close together. [See here for more](https://makingmaps.net/2007/08/28/perceptual-scaling-of-map-symbols/). 
+This page will demonstrate how to create map insets using British Columbia as an example. If you did not create a data layer of *just* British Columbia in the prior page on selections, please add the file `british-columbia.geojson` to your map now. 
 
-![prop symbol map](./images/chestnut-proportional-symbol.jpeg)
+## Establishing focus area
+Zoom in to British Columbia and style it appropriately if needed. 
 
-<!-- https://schoolofcities.github.io/urban-data-storytelling/urban-data-visualization/proportional-symbol-maps/proportional-symbol-maps.html -->
+Create a new Print Layout and call it `BC-map`. Add your current map to the layout. For this map, Portrait is the best layout orientation. Adjust the scale as needed to something lke `7000000`. 
 
-----
+<img src="./images/inset-layout2_20251102.png" style="width:100%">
 
-## Making a proportional symbol map in
-You can make proportional symbol maps in QGIS simply by converting polygons to centroids (if not already points) and then going to symbology and choosing Graduated. The following documentation breaks down how to do this. 
-<br>
+Use the **Move item content** tool to drag BC to the left of your map, creating a spot for an inset on the upper right-hand corner. Before working any further, go ahead and **Save** your Print Layout.
 
-*1*{: .circle .circle-yellow} To make a proportional symbol map like the above, where symbol size corresponds to the number of chestnut trees per neighborhood, we first need to run the **Centroids** tool on the `chestnut-count` polygon layer. You can also find the results of this in the `thematic-mapping` subfolder. Either create a centroids layer, or add the file `chestnut-count-centroids.geojson` to your project. 
+In the **Items list **, double click your Map 1 to rename it to `Main map`. Then, add another map to the upper right-hand corner. Rename this map `Inset`. 
 
-<img src="./images/proportional-symbol-centroids_20251102.png" style="width:100%">
+<img src="./images/inset-add2_20251102.png" style="width:100%">
 
-<br>
+Adjust the scale of your inset map so that the entirety of Canada is visible, to something like `50000000`, and use the Move item content tool again to center the inset content. 
 
-*2*{: .circle .circle-yellow} Open the layer properties. 
-> - Change the symbology type to **Graduated**. 
-> - Set the **Value** to `chestnut-trees`. 
-> - Then, change method to **Size**. 
-> - Update the maximum size to at least `20`. Then, hit **Classify** and **Apply**. 
+<img src="./images/inset-map2_20251102.png" style="width:80%">
 
-<img src="./images/proportional-symbol-properties_20251102.png" style="width:100%">
+You can now add neatlines and labeling to both maps. Note that the map scalebar and north arrow should be for the Main map. In some instances, for example when you are creating an inset to zoom in on an area of a thematic map, a scalebar/north arrow for the inset as well is warranted.
 
+You may notice that the `Lakes` layer is only visible on the main map. This is because it is quite distracting to have all the lakes in a zoomed-out map. To get a layer showing up in only one map, turn the layer off in your main QGIS interface and then update the map preview for only the inset.  <img src="./images/inset-update-map-preview_20251102.png" style="width:1%">
 
 <br>
 
-*3*{: .circle .circle-yellow} Just like in the previous page, you can change the classification mode. 
-
-
-*4*{: .circle .circle-yellow} To change the symbol symbology, click on **Symbol** option and then select "Simple Marker".
-
-<img src="./images/proportional-symbol-symbol_20251102.png" style="width:100%">
-
-
-<img src="./images/proportional-symbols_20251102.png" style="width:100%">
-
-<br>
-
-*5*{: .circle .circle-yellow} You can add Labels from the layer Properties as well, setting **Single Labels** according to the **Value** `chestnut-trees`. Adding a **Buffer** or adjusting the font color, and changing the **Placement** mode to "Offset from Point" will allow you to visualize the number above the symbol. 
-
-<img src="./images/proportional-symbol-map_20251102.png" style="width:100%">
+You can also create leader lines from an area to the inset that's zooming in. However, be sure the inset is the same shape of an area locator and contains exactly what is inside it. 
 
 
 
 
+<!-- 
+maybe just use map from before. and if selected and exported BC, all the better.
+of British Columbia with an inset showing Canada. Will be in black and white. (or choose something else like using the Native Land digital data)
 
+here is what it will look like below. 
 
+![inset map](./images/bc-map-demo.jpeg)
 
+Considerations. 
+Where to locate it. 
+Adding a frame or call out. 
+Leader lines
 
+Zooming in, scale. If zooming out, no scale. 
+When to use a north arrow. 
 
+Inset might have different projection.  
 
-
-
-<br><br>
-
-### Proportional symbol maps by hand
-Alternatively, if you want to spend extensive time styling your map and proportional symbols manually, you can export centroids (and other geographic layers) as an `.svg` file and open it in an illustration software like Adobe Illustrator or [Inkscape](https://inkscape.org/). The formula for *radius* of proportional symbols in absolute scaling is as follows: 
-> r<sub>C</sub> = (v<sub>C</sub> / v<sub>L</sub>) <sup>0.5</sup> * r<sub>L</sub>
-<br>
-
-> where r<sub>C</sub> is the radius of the circle to be calculated,<br>
-> r<sub>L</sub> is the radius of the largest circle,<br>
-> v<sub>C</sub> is the data value of the circle to be calculated, and<br>
-> v<sub>L</sub> is the data value of the largest circle<br>
-
-For perceptual scaling, increase the exponent to 0.57.   
-
-Formula Credit: *Slocum TA et al. Thematic Cartography and Geovisualization. 4th Ed. Boca Raton, FL: CRC Press, Taylor & Francis Group. 2023.* For more, see Chapter 18 ("Proportional Symbol Mapping") of UBC Library's e-book edition.
-
----- 
+Show example map I made.-->

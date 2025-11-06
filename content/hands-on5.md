@@ -1,56 +1,173 @@
 ---
 layout: default
-title: 5. Basemaps 
+title: 5. Creating a map
 nav_order: 5
-parent: Additional Content
+parent: Hands On
 ---
+# Creating a Map
+{: .no_toc}
 
-# Basemaps
-A basemap is helpful to give spatial context to your data layers—both as you're working and in your final map. You can also create a reference map that is simply a basemap. For example, the map made over the course of this workshop used Natural Earth data to show the countries surrounding Canada. Another way to add geographic context is through a web-based basemap. Web-based basemaps are maps of the whole world that are stored on servers and which you can add to your project without downloading them to your local computer. The following page will guide you through adding web-based basemaps to your QGIS project. 
+Once you are satisfied with your layer symbology, it's time to create a **Print Layout**. A Print Layout in QGIS is like a drawing board where you add the map you created, as well as other elements like a north arrow, legend, scale bar, text boxes, and other marginalia. You can create multiple Print Layouts per QGIS project. By giving each Print Layout you make a unique name, and saving it (and your QGIS project) regularly, you can return to a Print Layout from the at any time (Project menu --> Layouts) and continue working.  
+
+See The QGIS user guide here for a comprehensive introduction to the [QGIS Print Layout](https://docs.qgis.org/3.40/en/docs/training_manual/map_composer/map_composer.html).
+
+<details open markdown="block">
+  <summary>
+    On this page:
+  </summary>
+  {: .text-delta }
+ - TOC
+{:toc}
+</details>
+----
+
+
+## Create a new Print Layout
+
+To Do
+{: .label .label-green } 
+Create a new **Print Layout** by going the Project menu, and down to "New Print Layout". Call it "Canada".
+<img src="./images/new-print-layout_20250915.png" style="width:100%">
+Alternatively, you can click the Print Layout icon in the Toolbar. 
+<img src="./images/print-layout-icon_20250915.png" style="width:5%">
+
+This will open the **Print Layout** window. It looks quite similar to the main QGIS interface, so be careful not to edit the wrong thing. Notice, too, that once you've clicked into the Print Layout window, the menu at the top of your screen changes. 
+
+<img src="./images/print-layout-window_20250915.png" style="width:100%">
+
+
+----
+
+## Set Page properties
+**Page Properties** govern the orientation and dimensions of the Print Layout, or page. Depending on your publication platform, you might already know your layout constraints. Journals or book publishers will give you max and min dimensions for figures, as well as often dictate what file form they want them in (`.png`, `.jpg`, `.pdf`, or, often, an `.svg` or `.ai` file). For example, when making maps for books, the largest dimensions might be 4 x 6 inches. 
+
+To change the dimensions of the page, go to "Page Properties..." by right-clicking anywhere on the page's whitespace. You can also find Page Properties in the **Layout** menu at the top of your screen. 
+
+<img src="./images/page-properties-click_20250916.png" style="width:63%">
+
+
+To Do
+{: .label .label-green }
+Let's set the page dimensions for today's map to be 8.5 x 11 inches — the size of a sheet of copy paper. We'll keep the orientation set to Landscape. 
+
+To change the dimensions, click the **Size** drop-down options and select "Letter". To set custom dimensions, choose "Custom" size at the very bottom of the drop-down. This will activate the Height and Width input boxes. If setting a custom size via Height and Width, remember to include the units for these dimensions. In this way, you can set very specific dimensions depending on the criteria of your publisher.
+
+<img src="./images/page-properties_20250916.png" style="width:100%">
+
+
+Note: If you set smaller dimensions than the default, your Print Layout—the white page juxtaposed to the grey background—will get smaller. To zoom it in so you can see your workspace, drag two fingers diagonally or scroll to enlarge the amount of space your Print Layout takes up on the screen. If you change the size of your Print Layout after you've already added a map, remember to adjust the map size; only what is contained within the Print Layout will be exported. 
+
+----
+
+## Add items to the Print Layout
+
+At minimum, apart from the map itself, a Print Layout should have a title, scalebar, north arrow, and map author/data source. A legend is required if you have any layers added to your map that aren't reference layers or that need explanation. 
+
+We can add items using the icons on the left-hand vertical toolbar, but I find these difficult to interpret. For this reason, I default to adding items from the **Add Items menu**. 
+
+<img src="./images/print-layout-menu_20250915.png" style="width:90%">
+
+
+
+### 1. Add a map 
+{: .no_toc}
+
+First things first, let's add the map we made to our Print Layout. Click on "Add Map" from the Add Items menu. Your curser should turn into a crosshair when hovered over the page whitespace. Drag diagonally across your Print Layout page, corner to corner. 
+
+![add map gif](./images/add-map_20250915.gif)
+
+
+Once you add an item to your Print Layout, it will also show up in your **Items** list. The Items list is similar to your Layers Panel, but for the Print Layout. Click on any item in your Items list to view and modify its properties. 
+
+You'll notice that Canada might not take up the full page; in other words, it's rather zoomed out. To zoom in, the most reliable method is simply to change its scale. We can do this from the **Item Properties**. You can activate an Item's properties simply by clicking it in the Items list, and then looking at the Properties panel below it. Note: You'll likely have to scroll to modify many of the properties, and resize your Items panel to reach the dropdowns. 
+
+<img src="./images/item-properties-map_20250915.png" style="width:100%">
+
+The scale number, `27056663`, is the denominator in a fraction `1:27056663`. This means 1 unit on the map represents 27,056,663 units in the real world. To zoom in, we want to reduce the denominator so that the fraction is a larger number, and 1 unit on the map corresponds to a smaller, more localized area in the real world. When in doubt, simply increase or decrease the scale number substantially to gauge which direction you need to go in. For this map, something like `22,000,000` should work. 
  
+  - <img src="./images/move-item-content-icon_20250915.png" style="width:7%">To move your map around within the frame itself, use the **Move item content** tool from the left-hand toolbar.  
 
-## Adding basemaps from web plugin
-While your out-of-the-box QGIS applicaiton will have a few basemap options under the XYZ tab of your Browser Panel, you can access way more with a plugin. [QGIS Plugins](https://plugins.qgis.org/) are user developed tools that extend QGIS functionality beyond the basics. There are two popular plugins for webmap libraries called QuickMapServices and OpenLayers.The following documentation will show you how to install the QuickMapServices plugin, add basemaps to your QGIS project, and create and export a map using one of them. 
-
-
-### Install Plugin
-[QGIS plugins](https://plugins.qgis.org/) are user developed tools that extend QGIS functionality beyond the basics. To access basemaps, we'll first install the QuickMapServices plugin. Click on the **Plugin** menu at the top of your screen and select **Manage and Install Plugins...**
-
-![Install plugin](./images/install-plugin_20221024.png)   
-
-In the dialogue box that opens, select **All** as a search category on the left and type "QuickMapServices" as one word. Install the plugin and close the dialogue box.
-
-![quick map services](./images/quickmapservices_20221026.png)
-
-### Add Basemap
-Now go to the **Web** menu at the top of your screen. You should see the QuickMapServices plugin. Hover over it and click "Settings" at the bottom of the menu that pops up. In the settings dialogue box go to the "More services" tab and click "Get contributed pack." Click **save** to close settings and return to the **Web** menu. This time when you hover over the QuickMapServices plugin you will see an array of basemap options. Select OpenStreetMap as your basemap. Like QGIS, [Open Street Map (OSM)](https://www.openstreetmap.org/about) is open source and user developed.   
-
-<img src="./images/get-contributed-pack.png" style="width:50%">
+  - <img src="./images/move-select-icon_20250915.png" style="width:7%">To select, resize, or move content like the map itself, use the **Move/Select item** tool.
+<!-- <img src="./images/move-item-content_20250915.png" style="width:100%"> -->
 
 
-Make sure to drag your basemap to the bottom in your Layers Panel. Remove the basemap at anytime by right clicking the layer and selecting "remove." 
+### 2. Add a scalebar
+{: .no_toc}
+Now that we've set the scale of our map, let's add a scalebar to the Print Layout. Just like above, you can add a scalebar from the **Add Item** menu at the top of your screen. (Remember, if you don't see this menu bar, make sure you're clicked into the Print Layout window.) Again, to add the scalebar item to your Print Layout, draw a small rectangle with your cursor. 
 
-![Add basemap](./images/add-basemap_20240607.png)
-
-
-Use the zoom tools <img src="./images/zoom-tools.png" style="width:40%"> located in the toolbar to zoom to see each basemap in detail. Hide a basemap at any time by unchecking the box beside it in the Layers panel. Remove a basemap at anytime by right clicking the layer and selecting “remove.”
-
-![remove basemap](./images/remove-basemap_20240607.png)
-
-Sometimes when you re-open a QGIS project basemaps previously loaded will turn up blank. Try right-clicking the basemap in your Layers Panel and zooming to it. Otherwise, simply re-add the basemap from the Web menu at the top of your screen.
+![add scale bar](./images/add-scale-bar_20250916.gif)
 
 
-If you find web-based maps interesting, check out the Research Commons' [Leaflet Workshop!](https://ubc-library-rc.github.io/gis-intro-leaflet/). If you find plugins compelling, check out our workshop on [Plugins in QGIS](https://ubc-library-rc.github.io/gis-plugins-qgis/).
-{: .note}
+Once you've added the scalebar, you can customize it. Choose a scalebar **Style** from the dropdown menu. The scalebar will adjust automatically if you adjust the scale of your map.
+
+<img src="./images/edit-scalebar1_20250915.png" style="width:100%">
+
+
+Best practice is for your scale bar to be in **metric units**. 
+
+
+To customize the symbology of your scalebar as well as its lettering, scroll down and expand the **Appearance** option. Click on **Font** in Appearance to change the font family and color of your scalebar labels. Thinking about Visual Hierarchy, perhaps the scalebar and lettering could be a lighter in color, or slightly transparent. Consider matching the lettering and line color with the provinces (if you're using a single symbol symbology for Canada). 
 
 
 
 
+### 3. Add a north arrow
+{: .no_toc}
+Add a north arrow. You will notice there's an option to choose either Grid North or True North. Grid North is relative to the projection used, whereas True North, like the name implies, is a fixed geographic location. According to [QGIS](https://docs.qgis.org/3.40/en/docs/user_manual/print_composer/composer_items/composer_image.html)
+  > - **Grid north**: the direction of a grid line which is parallel to the central meridian of the national/local grid
+  > - **True north**: direction of a meridian of longitude
+
+There is also Magnetic North, which is Earth's magnetic pole and which shifts slightly. Depending on what projection is used and whereabouts your map is zoomed in to (near a pole or the equator; showing a large geographic area vs. a small one), which north orientation choose will be more or less important. Today's workshop won't go into the specifics, but Grid North is generally okay for maps not close to either poles and which cover a large area. [Read more on north arrows here](https://docs.os.uk/more-than-maps/geographic-data-visualisation/guide-to-cartography/north-arrows).
+
+<!-- The [central meridian](https://gisgeography.com/central-meridian/) is where the 2-dimensional surface that's wrapped around the globe in a projection intersects with that globe. If your mapped area is around a central meridian, which is likely if you're using a UTM projection (in a specific Zone) or otherwise projection that's specifically designed for your region because of it's central meridian, then you can go ahead and use Grid North. If your map is centered on a region near the north (or south) pole, you might be better served using Truth North as that will angle the north arrow along the lines of longitude.  -->
 
 
-## Making a map from a basemap
 
-To use a basemap as your final reference map, simply turn off or remove all other layers. Create a new Print Layout and add your map. Be sure to include a source statement at the bottom. Be sure to check the license of any basemap before using it for academic publication. 
 
-<img src="./images/ubc-campus-demo.jpeg" style="width:55%">
+
+### 4. Add labels 
+{: .no_toc}
+Although you can add labels to your map based on layer attributes in the main QGIS interface, you can also add individual text labels, including place names as well as titles and attributes/data sources to the Print Layout via the Add Labels item. 
+
+Go ahead and add a label for Canada if you don't have provinces individually labelled from before. To increase the font size and spacing, scroll down in the Item properties and click on Appearance. You can increase the spacing to stretch a Canada label across the entire country. 
+
+Visual Hierarchy is relevant to labelling in a couple ways. 
+Color, transparency, size, yes
+Also font style. 
+
+Labels for countries not included should be in a small and non-descript color. Additionally, Alaska should be labelled "United States of America" and match the style of the contiguous "United States of America" label below Canada.
+
+
+### 5. Add a neatline
+{: .no_toc}
+The border around your map frame is called a neatline. You can add a neatline by turning on the **Frame** option of your map item, and then styling it. 
+
+<img src="./images/add-neatline_20251102.png" style="width:100%">
+
+<!-- We can add this as its own shape, or add border to map item itself.  -->
+
+### Map author and data source
+{: .no_toc}
+
+At the bottom of your map, just above the neatline, it's customary to include the map author and data sources. The sources for this map are Natural Earth & Statistics Canada. If your map includes Indigenous territories, be sure to note Native Land Digital too. 
+
+### Legend
+{: .no_toc}
+Though not required here, a legend explains data layers added to a map. The Additional Content section will delve into adding and styling a legend. However, note that you can add a legend from the **Add Items menu**. 
+
+
+
+## Export your map
+You can export your map as an image, PDF, or scalable vector graphic (`.svg`) from the Print Layout toolbar, or from the Layout menu. You can also print your map directly from QGIS. 
+
+<img src="./images/export-layout_20250927.png" style="width:39%">
+<img src="./images/print-layout2_20250917.png" style="width:43%">
+
+When exporting as an image or PDF, you will be prompted to enter the resolution. I recommend increasing the resolution to at least 450dpi, otherwise your map will be blurry. 
+
+
+
+
+
+
 
