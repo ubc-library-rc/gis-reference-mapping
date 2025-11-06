@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 6. Basemaps 
+title: Basemaps 
 nav_order: 6
 parent: Additional Content
 ---

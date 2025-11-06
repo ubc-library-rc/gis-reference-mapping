@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 7. Insets
-nav_order: 7
+title: Insets
+nav_order: 9
 parent: Additional Content
 ---
 # Insets

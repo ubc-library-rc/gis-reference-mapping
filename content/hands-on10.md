@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 10. Choropleth Maps
+title: Choropleth Maps
 nav_order: 10
 parent: Additional Content
 ---

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 13. Cartograms
+title: Cartograms
 nav_order: 13
 parent: Additional Content
 ---

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 8. Selections 
+title: Selections 
 nav_order: 8
 parent: Additional Content
 ---

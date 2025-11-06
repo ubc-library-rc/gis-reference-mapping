@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 12. Heatmaps
+title: Heatmaps
 nav_order: 12
 parent: Additional Content
 ---

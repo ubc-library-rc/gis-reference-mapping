@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 14. Exporting to Inkscape
+title: Exporting to Inkscape
 nav_order: 14
 parent: Additional Content
 ---

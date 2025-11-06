@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 11. Proportional Symbol Maps
+title: Proportional Symbol Maps
 nav_order: 11
 parent: Additional Content
 ---
