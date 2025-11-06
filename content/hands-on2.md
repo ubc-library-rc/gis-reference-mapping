@@ -7,7 +7,7 @@ parent: Hands On
 # Setting up a QGIS Project 
 {: .no_toc}
 
-To begin the Hands-On portion of this workshop, we will open and set up the QGIS project. This page will introduce you to the QGIS interface, and guide you through loading data, setting the project properties, managing your layers, and creating spatial bookmarks. 
+To begin the **Hands-On** portion of this workshop, we will open and set up the **QGIS project**. This page will introduce you to the QGIS interface, and guide you through loading data, setting the project properties, managing your layers, and creating spatial bookmarks. 
 
 
 
@@ -53,28 +53,30 @@ Once you’ve gathered relevant data, the next step is to add it to a QGIS proje
 
 To Do
 {: .label .label-green }
-Add the layers to your map *in the following order*
+Add the layers to your map *in the following order*. 
 1. `ne_50m_ocean.shp` (World Oceans at medium scale from Natural Earth)
 2. `ne_50m_admin_0_countries.shp` (World Countries at medium scale from Natural Earth)
 3. `lpr_000b16a_e.shp` (Canadian Provinces from Statistics Canada)
 4. `ne_50m_lakes.shp` (World Lakes and Reservoirs at medium scale from Natural Earth)
 
-Zoom into canada. The symbology, or coloring of each layer is random. We will change these in the next section. 
+If for any reason you weren't able to download the necessary data, those files will be in the `backup-data` folder. Just remember to unzip them.
+ 
 
 <!-- ![data added](./images/data-added_20250915.png) -->
 ![data added](./images/data-added2_20250915.png)
 
-  
-Now add `native-land-territories.geojson` (Indigenous territories downloaded from Native Land Digital using their API)
+Zoom-in to Canada. The symbology, or coloring of each layer, is random. We will change these in the next section.
+
+Now add `native-land-territories.geojson` (Indigenous territories downloaded from Native Land Digital using their API).  Your map canvas should look something like this now. 
 
 <img src="./images/canada-zoom1-WGS84_20250915.png" style="width:49%">
 <img src="./images/canada-zoom2-WGS84_20250915.png" style="width:49%">
 
 
-If for any reason you weren't able to download the necessary data, those files will be in the `backup-data` folder. Just remember to unzip them. Your map canvas should look something like this now. 
-{: .note}
 
-Note, too, that your data isn't saved _inside_ your QGIS project. Rather, the *filepath connections* are saved, as well as any modifications to symbology made to the layers in QGIS. When mapping in QGIS, it's important to keep track of where the data you're working with is stored. If you move your data, QGIS won't know where to look for it and a red exclamation mark will appear in the Layers Panel. You can click on this warning to tell QGIS where the data is now stored. 
+
+
+ Your data isn't saved _inside_ your QGIS project. Rather, the *filepath connections* are saved, as well as any modifications to symbology made to the layers in QGIS. When mapping in QGIS, it's important to keep track of where the data you're working with is stored. If you move your data, QGIS won't know where to look for it and a red exclamation mark will appear in the Layers Panel. You can click on this warning to tell QGIS where the data is now stored. 
 {: .note}
 
 
@@ -83,7 +85,7 @@ Note, too, that your data isn't saved _inside_ your QGIS project. Rather, the *f
 ----
 
 ## Project Properties
-You can access the Project Properties from the the **Project** menu. Click down to **CRS**. CRS stands for Coordinate Reference System, and describes the mathematics behind transforming a 3-dimensional Earth to fit on a 2-dimensional screen. A projection is part of the Coordinate Reference System, and is responsible for projecting a set of points from a 3-dimensional space onto a 2-dimensional plane. There are a variety of projections, each one preserving some characteristics of shape, area, distance, and direction, while distorting others. When choosing the best projection for your map, it is important to consider the content you are visualizing and the extent of the geographic area. Every spatial data layer comes with its own stored projection, often noted at the point of download. Note: If you don't set a projection at the start, your QGIS project will assume the projection of the first layer you add. 
+You can access the Project Properties from the the **Project** menu. Open the Project Properties and click down to **CRS**. CRS stands for Coordinate Reference System, and describes the mathematics behind transforming a 3-dimensional Earth to fit on a 2-dimensional screen. A projection is part of the Coordinate Reference System, and is responsible for projecting a set of points from a 3-dimensional space onto a 2-dimensional plane. There are a variety of projections, each one preserving some characteristics of shape, area, distance, and direction, while distorting others. When choosing the best projection for your map, it is important to consider the content you are visualizing and the extent of the geographic area. Every spatial data layer comes with its own stored projection, often noted at the point of download. Note: If you don't set a projection at the start, your QGIS project will assume the projection of the first layer you add. 
 
 To Do
 {: .label .label-green }
@@ -109,15 +111,15 @@ For more on Coordinate Reference Systems, see [here](https://ubc-library-rc.gith
 ----
 
 ## Managing Layers
-Although this workshop works with only a handful of layers, some projects require you to juggle more than 10 layers. Having strategies to stay organized is therefore important. Additionally, layers that cover the entire Earth are quite large and require lots of processing power to load anew each time you pan and zoom around your map canvas. Best practice is to "hide" or "turn off" layers you aren't using so as not to slow your computer down. Below are some ways to stay organized.
+Although this workshop works with only a handful of layers, some projects require you to juggle more than 10 layers. Having strategies to stay organized is therefore important. Additionally, layers that cover the entire earth are quite large and require lots of processing power to load anew each time you pan and zoom around your map canvas. Best practice is therefore to "hide" or "turn off" layers you aren't using so as not to slow your computer down. Below are some tips to stay organized.
 
 - **Rendering order** Note that we added layers to our project in a very specific order. This is because QGIS will render layers from the top down, meaning the layers to the top of your Layers Panel list will sit above the layers below. We added provinces and then lakes so that provinces could be seen above countries, and lakes above provinces. You can reorder your layers at any time by dragging them up or down. 
 
-- **Turning layers on and off** Turn layers on and off (or hide and show) them by clicking the little check-box beside each layer. If you've added a layer but don't see it rendered, it is likely underneath another layer. Rather than rearranging every layer until you find it, you can successively turn each layer off until you find the one you're looking for.  
+- **Turning layers on and off** Turn layers on and off (or hide and show them) by clicking the little checkbox beside each layer. If you've added a layer but don't see it rendered, it is likely underneath another layer. Rather than rearranging every layer until you find it, you can successively turn each layer off until you find the one you're looking for.  
 
 - **Zoom to layer** To zoom to a layer, simply right-click (control-click) any layer and select the top option to "Zoom to Layer(s)". <img src="./images/zoom-to-layers_20250915.png" style="width:22%"> Zooming to a layer simply centers the extent of that layer in your map canvas. Often times when you first open a QGIS project, even if data is loaded and turned on, your map canvas will appear blank. Zooming to a layer will immediately populate your screen with the loaded layers. If you zoom to any of the global layers, you will return to the global view. 
 
-     > Try zooming to `lpr_000b16a_e`, Canadian Provinces.  
+     > Try zooming to `lpr_000b16a_e` (Canadian Provinces).  
 
 - **Renaming layers** You can rename layers in the Layers Panel. This does not change the datasets themselves, but rather their nicknames as they appear in your QGIS project. To rename a layer, simply right-click the layer in your Layers Panel and go to "Rename Layer". 
 
@@ -125,18 +127,18 @@ Although this workshop works with only a handful of layers, some projects requir
      > Try renaming your layers. For example, rename `lpr_000b16a_e` to   `Provinces`. 
 
 
-- **Grouping Layers** If you're ever working with numerous layers, you can creat layer groups through the group icon <img src="./images/add-group-icon_20250915.png" style="width:4%"> or by right-clicking anywhere that's empty in the Layers Panel and selecting "Add Group". Once you've added and named a group, you can drag layers into it. You can move layers out of a group at any time, and right-click the group to remove or rename it. Each layers group will have its own visibility check-box, meaning that even as you set the visibility for each individual layer within the group, only by rendering the group itself visible will any of its nested layers appear on your screen. 
+- **Grouping Layers** If you're ever working with numerous layers, you can create layer groups through the group icon <img src="./images/add-group-icon_20250915.png" style="width:4%"> or by right-clicking anywhere that's empty in the Layers Panel and selecting "Add Group". Once you've added and named a group, you can drag layers into it. You can move layers out of a group at any time, and right-click the group to remove or rename it. Each layers group will have its own visibility checkbox, meaning that even as you set the visibility for each individual layer within the group, only by rendering the group itself visible will any of its nested layers appear on your screen. 
    
      > Turn off the visibility of `native-land-territories` for the time being. 
 
-- **Removing layers** Just as you can add layers to your QGIS project, you can remove layers at any time. This will not delete the datasets themselves; after all, they are not saved inside your QGIS project (as ArcGIS would do), but rather it is the file connections that are saved, as well as any symbology design you may do. To remove a layer connection from your project, simply right-click that layer in your Layers Panel and select "Remove Layer...". 
+- **Removing layers** Just as you can add layers to your QGIS project, you can remove layers at any time. This will not delete the datasets themselves; after all, they are not saved inside your QGIS project (as ArcGIS would do). Rather, it is the file connections that are saved, as well as edits to their symbology made in QGIS. To remove a layer connection from your project, simply right-click that layer in your Layers Panel and select "Remove Layer...". 
 
 - **Checking file paths** If you are ever uncertain where a loaded layer is stored on your physical computer, hover over the layer to see its file path.
 
 - **Refreshing Data Source** If you add new data to your working folder already pinned as a favorite directory in your Browser Panel, you might need to "Refresh" the folder connection for the new files to appear. Simply right-click the folder connection and select "Refresh". You can also click the Refresh icon <img src="./images/refresh-icon_20250915.png" style="width:4%"> to refresh all connections. 
 
 
-- **Exporting Layers** Exporting a layer essentially makes a copy of the dataset on your computer with a name, file type, and location of your choice. This can be useful if you want to duplicate a layer, save a temporary layer as a permanent file, or save a selection as a new layer/dataset. To export a layer, simply right-click the layer, go to "Export" --> "Save Feature As...". Note that your new file will not have the same symbology, though you can copy/paste one layer's symbology to another.
+- **Exporting Layers** Exporting a layer essentially makes a copy of the dataset on your computer with a name, file type, and location of your choice. This can be useful if you want to make a copy of a layer, save a temporary layer as a permanent file, or save a selection as a new layer/dataset. To export a layer, simply right-click the layer, go to "Export" --> "Save Feature As...". Note that your new file will not have the same symbology, though you can copy/paste one layer's symbology to another. "Duplicating" a layer, which you can also do by right-clicking a layer in your Layers Panel, doesn't create a copy of the dataset, just adds it twice to your project. 
 
 - **Copy/Paste Symbology** Right-click the layer whose symbology you want to copy in the Layers Panel, go to "Styles" --> "Copy Style" --> "Symbology". Then right-click the target layer, and go to "Styles" --> "Paste Style" --> "Symbology".
 
@@ -145,7 +147,7 @@ Although this workshop works with only a handful of layers, some projects requir
 
 
 ## Spatial Bookmarks
-Another tip, especially if you're using a single layer to make a map of different locations, is to make spatial bookmarks. A spatial bookmark is exactly what it sounds like: a way to bookmark a canvas extent to return to layer. You can add a spatial bookmark from the bookmark icon in the **Toolbar**, from the **View menu**, or from the Spatial Bookmark tab in your **Browser Panel**. by going to here or there. You can then set it to your map canvas, or a layer, etc. You can then save the bookmark with a name to your project (this project alone) or to your user settings (every QGIS project you ever make and open). 
+Another tip, especially if you're using a single layer to make a map of different locations, is to make **spatial bookmarks**. A spatial bookmark is exactly what it sounds like: a way to bookmark a canvas extent to return to layer. You can add a spatial bookmark from the bookmark icon in the **Toolbar**, from the **View menu**, or from the Spatial Bookmark tab in your **Browser Panel**. by going to here or there. You can then set it to your map canvas, or a layer, etc. You can then save the bookmark with a name to your project (this project alone) or to your user settings (every QGIS project you ever make and open). 
 
 ![spatial bookmark](./images/spatial-bookmark_20250915.png)
 
@@ -153,7 +155,7 @@ Another tip, especially if you're using a single layer to make a map of differen
 To Do
 {: .label .label-green }
 
-Make a spatial bookmark of Canada. If you've already zoomed to the provinces layer, set your spatial bookmark extent to Map Canvas Extent. Otherwise, be sure Canada is centered on your screen first, or set the provinces layer as your extent. Save to Project Bookmarks. 
+Make a spatial bookmark of Canada. If you've already zoomed to the provinces layer, set your spatial bookmark extent to "Map Canvas Extent". Otherwise, be sure Canada is centered on your screen first, or set the provinces layer as your extent. Save to Project Bookmarks. 
 
 
 <img src="./images/spatial-bookmark-parameters_20250915.png" style="width:70%">
