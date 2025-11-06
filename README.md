@@ -4,7 +4,16 @@
 :heavy_exclamation_mark: This workshop is in development and not yet complete. :heavy_exclamation_mark:    
     
 
-This workshop provides an overview of how to create reference maps for academic publication. If you need to map depicting your research area, or want to show your data points spatially in a static map, this workshop is for you. No prior experience with mapping software is required. 
+his workshop will provide an overview of how to create simple, static reference maps to accompany academic publications. We will use [QGIS](https://qgis.org/), a free and open-source Geographic Information System (GIS) for analyzing, modifying, and visualizing spatial data.  
+
+This workshop is geared towards mapping novices. If you want to create  a map that geographically contextualizes your study area, or have a project involving data with a spatial component you're eager to visualize, this workshop is for you.  While making such maps on your own can feel daunting, this workshop will give you the confidence to:
+
+- Decide what kind of map best conveys your research or contextualizes your study area;
+- Find and download relevant spatial data;
+- Load datasets into QGIS and style them as data layers;
+- Compose a map that includes a title, scale bar, legend, and north arrow; and
+- Export this map into formats compatible with print and digital publication.
+<br>
 
 Link to workshop: [https://ubc-library-rc.github.io/gis-reference-mapping/](https://ubc-library-rc.github.io/gis-reference-mapping/)
 
