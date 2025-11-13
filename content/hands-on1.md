@@ -5,8 +5,19 @@ nav_order: 1
 parent: Hands On
 ---
 # Gathering Data 
+{: .no_toc}
 
 So where do you find spatial data? Maybe you already have some, maybe you're still searching. A lot of spatial data is accessible via the internet, albeit under different licenses. 
+
+<details open markdown="block">
+  <summary>
+    On this page:
+  </summary>
+  {: .text-delta }
+ - TOC
+{:toc}
+</details>
+----
 
 ### Libraries, Municipal portals, and Governmental agencies 
 Outside of this workshop, you might begin your search on UBC Library's [GIS website](https://gis.ubc.ca/data/). If you are a UBC student, staff, or faculty, you'll also have access to the [Abacus Data Network](https://abacus.library.ubc.ca/) which contains lots of data, including historical datasets. Municipal and governmental agencies local to your project are also great places to begin looking. For example, see for Vancouver the [Vancouver Open Data Portal](https://opendata.vancouver.ca/pages/home/), [Data BC](https://catalogue.data.gov.bc.ca/) for Provincial data, and [Natural Resources Canada](https://natural-resources.canada.ca/science-data/data-analysis/geoca) for national resource data. Many Canadian cities have their own municipal open data source, though downloading the data will be different depending on the platform used by each city (see our workshop on [Tools and Workflows](https://ubc-library-rc.github.io/gis-tools-workflows/content/downloading-data.html) for guidance).  
@@ -22,7 +33,10 @@ The [Humanitarian Data Exchange](https://data.humdata.org/) contains lots of use
 Satellite imagery can often be downloaded directly from providers. For example, download Sentinel data from the [Copernicus Browser](https://browser.dataspace.copernicus.eu/?zoom=5&lat=50.16282&lng=20.78613&demSource3D=%22MAPZEN%22&cloudCoverage=30&dateMode=SINGLE). If you're using QGIS, the [SRTM-Downloader](https://plugins.qgis.org/plugins/SRTM-Downloader/) plugin is a handy tool to download NASA data for a specific area of interest directly from within your GIS interface. If you are a UBC student, staff, or faculty, you can [request a Planet account](https://researchcommons.library.ubc.ca/planet-imagery/) to gain access to much more imagery. Refer to our [Project Design workshop and resource](https://ubc-library-rc.github.io/gis-spatial-stories/content/resources-for-data-assembly.html) for important considerations as you search, download, store, and use data.
 
 ### Creating your own
-Finally, you can always create your own vector layers, or create new shapefiles within a GIS by tracing existing data. If you are working with historical or physical maps and want to digitize them or otherwise create spatial data using them as template, see our workshop on [georeferencing](https://ubc-library-rc.github.io/gis-georeferencing/) or our [georeferencing resource page](https://ubc-library-rc.github.io/gis-spatial-stories/content/resources-for-georeferencing.html). 
+
+Finally, you can always create your own vector layers, or create new shapefiles within a GIS by tracing existing data. For an extended tutorial on how to do this, please see the [Additional Content](./additional-content.md) pages. Below, we will use <a href="https://geojson.io/#map=2/0/20" target="_blank">geojson.io</a> to create a single point over Ottawa to add to our maps. Geojson.io is a great platform to create simple point, line, and polygon shapefiles. 
+
+If you are working with historical or physical maps and want to digitize them or otherwise create spatial data using them as template, see our workshop on [georeferencing](https://ubc-library-rc.github.io/gis-georeferencing/) or our [georeferencing resource page](https://ubc-library-rc.github.io/gis-spatial-stories/content/resources-for-georeferencing.html). 
 
 
 ----
@@ -32,8 +46,10 @@ Finally, you can always create your own vector layers, or create new shapefiles 
 Today's workshop will use _vector data_ data from Natural Earth, Statistics Canada, and Native Land Digital. The workshop folder contains some of this data, as well as additional datasets for you to practice thematic mapping. However, because finding, downloading, and preparing spatial data is a major part of mapping for academic publication, you will be guided through downloading the main datasets for today's workshop on your own. Remember, move each dataset you download to the workshop folder and *unzip it* there. 
 
 ### Data needed
+
 - Canadian provincial & territorial boundaries 
 - World countries, lakes, and oceans
+- Point over Ottawa, Canada's capital city
 
 To Do
 {: .label .label-green }
@@ -56,7 +72,25 @@ Navigate to [www.naturalearthdata.com](https://www.naturalearthdata.com/). Go to
 
 You have the option to download large scale, medium scale, and small scale data. Large scale will give you the most detail, and therefore be a heftier file. Because our Natural Earth data will be used as context for surrounding countries only, we actually prefer a less detailed, smaller scale outline. So, let's download **vector data** at the **medium scale**. We will download 3 files: **Countries**, **Ocean**, and **Lakes+Reservoirs**. Countries will be under "Cultural" and Ocean and Lakes under "Physical". 
     
+<br>
+
+**3. Create a point over Ottawa**
+Finally, we will create a point over Ottawa. To do this, will use <a href="https://geojson.io/#map=2/0/20" target="_blank">geojson.io</a>, an online platform where you can click to create simple point, line, and polygon features which can then be downloaded and uploaded to a GIS. 
+
+1. Go to <a href="https://geojson.io/#map=2/0/20" target="_blank">geojson.io</a> 
+
+2. Simply type "Ottawa" in the search bar and the webmap should zoom to the desired location. 
+<img src="./images/geojson-io_20251113.png" style="width:100%">
+
+3. Click the drop-pin icon. Your cursor should turn into a cross hair. Now click on the map, exactly where the drop-pin for Ottawa is already given.     
+<img src="./images/geojson-drawpoint_20251113.png" style="width:100%"> 
+
+4. Once you click, you will notice some geoJSON code appears on the right-hand panel. This is the geoJSON that stores a single point. Click **Save** in the upper left-hand corner, and save your new point layer as either a `geojson` (notice, however, you can save as a shapefile or another file format as well). Once the file is downloaded, ***move it to your `reference-mapping-workshop` folder.
+<img src="./images/geojson-save_20251113.png" style="width:100%">
+
+
 ----
+
 **Remember to move all downloads to your workshop data folder and unzip them there.**
 
 ----
