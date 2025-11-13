@@ -85,7 +85,7 @@ Finally, we will create a point over Ottawa. To do this, will use <a href="https
 3. Click the drop-pin icon. Your cursor should turn into a cross hair. Now click on the map, exactly where the drop-pin for Ottawa is already given.     
 <img src="./images/geojson-drawpoint_20251113.png" style="width:100%"> 
 
-4. Once you click, you will notice some geoJSON code appears on the right-hand panel. This is the geoJSON that stores a single point. Click **Save** in the upper left-hand corner, and save your new point layer as either a `geojson` (notice, however, you can save as a shapefile or another file format as well). Once the file is downloaded, ***move it to your `reference-mapping-workshop` folder.
+4. Once you click, you will notice some geoJSON code appears on the right-hand panel. This is the geoJSON that stores a single point. Click **Save** in the upper left-hand corner, and save your new point layer as either a `geojson` (notice, however, you can save as a shapefile or another file format as well). Once the file is downloaded, ***move it to your `reference-mapping-workshop` folder. You may need to rename it to `ottawa` rather than `map.geojson` which is the default. 
 <img src="./images/geojson-save_20251113.png" style="width:100%">
 
 
