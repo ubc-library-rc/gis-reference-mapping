@@ -8,3 +8,6 @@ parent: Additional Content
 # Exporting your QGIS Map to Inkscape 
 
 If you're interested in spending more time honing the aesthetics of your map, you can always export a rudimentary map from QGIS and conduct advanced editing in a graphics illustration software such as Adobe Illustrator or its open-source alternative, [Inkscape](https://inkscape.org/). 
+
+This page is in development and not yet complete.
+{: .note}
