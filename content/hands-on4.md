@@ -22,16 +22,16 @@ When using light vs. dark colors to establish a visual hierarchy between foregro
 
 
 
-<!--carousel styling and code from W3schools-->
+<!--carousel styling and code adapted from W3schools-->
 <html>
 <link rel="stylesheet" href="../style.css">
 <div class="slideshow-container">
-<div class="mySlides ">
+<div class="mySlides">
   <div class="numbertext">1 / 2</div>
   <img src="./images/vh-light-foreground.jpeg" style="width:100%">
   <!-- <div class="text">Caption Text</div> -->
 </div>
-<div class="mySlides ">
+<div class="mySlides">
   <div class="numbertext">2 / 2</div>
   <img src="./images/vh-dark-foreground.jpeg" style="width:100%">
 </div>
@@ -72,7 +72,9 @@ function showSlides(n) {
 
 If there are multiple elements in the foreground, you can choose contrasting colors to distinguish them, or, choose similar colors to connect them. Likewise, choosing similar colors for backgrounded items like a data source statement and north arrow, can help minimize the number of colors the viewer has to interpret. 
 
-Additionally, it can help to use the eyedropper color sampling option to match these elements' color to whatever they are on top of (like the ocean) and then simply make them a tad darker so they are visible still. Same with legend backgrounds and neatlines (borders around map items). Be careful, however, not to make colors too light, lines to thin, or text too small. What appears contrasting on the computer screen will be less contrasting in print. Best practice is to have text size _at minimum_ 7pt, and line width _at minimum_ .3 or .5pt. Again, it depends on your medium of publication but if you plan to publish your maps in print, err on the side of darker, wider, and bigger. 
+Additionally, it can help to use the eyedropper color sampling option to match these elements' color to whatever they are on top of (like the ocean) and then simply make them a tad darker so they are visible still. Same with legend backgrounds and neatlines (borders around map items). You can also copy and paste the color's hex code, or add it to your pallette. 
+
+Be careful, however, not to make colors too light, lines to thin, or text too small. What appears contrasting on the computer screen will be less contrasting in print. Best practice is to have text size _at minimum_ 7pt, and line width _at minimum_ .3 or .5pt. Again, it depends on your medium of publication but if you plan to publish your maps in print, err on the side of darker, wider, and bigger. 
 
 -  [ColorBrewer](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) is a fantastic resource for generating customized color palettes. [Coloring for Colorblindness](https://davidmathlogic.com/colorblind/#%23D81B60-%231E88E5-%23FFC107-%23004D40) will help you design colorblind-friendly palettes. 
 
@@ -82,17 +84,127 @@ If you want your map to be all around softer, you can set the background element
 <img src="./images/soft-colors-exaple.jpeg" style="width:100%">
 
 
-### **Outlines** 
-An outline brings something to your attention, adding crispness to form. To send elements to the background, consider removing their outlines. A light-colored outline against a darker foregrounded element will help it stand out and vice versa. If both foreground and background are outlined, consider color matching by adding light-colored outlines to light objects, and dark outlines to darker objects.  light-colored outlines  Consider removing outlines from background layers, such as ocean, lakes, and countries. Consider adding a light outline to provinces of all once color, or removing alltogether if provinces symbolized in a categorized manner. 
+----
 
-  <img src="./images/outline-example_20250917.jpeg" style="width:100%">
+## Outlines
+An outline brings something to your attention, adding crispness to form. To send elements to the background, consider removing their outlines. A light-colored outline against a darker foregrounded element will help it stand out and vice versa. 
 
-  <img src="./images/outline-example2_20250917.jpeg" style="width:100%">
+If both foreground and background are outlined, consider color matching by adding light-colored outlines to light objects, and dark outlines to darker objects.  light-colored outlines  Consider removing outlines from background layers, such as ocean, lakes, and countries. Consider adding a light outline to provinces of all once color, or removing all together if provinces symbolized in a categorized manner. Keep in mind the color of an outline also impacts visual hierarchy.
 
+
+<!--carousel styling and code adapted from W3schools-->
+<!--in order to have multiple slide decks in single markdown page, not only do each myslide, slide-containter, and dot need their own style item and slidIndex its own variable, but everything else that's a variable also needs its ow (ie, everything coded yellow-->
+<html>
+<link rel="stylesheet" href="../style.css">
+<div class="slideshow-container1">
+<div class="mySlides1">
+  <div class="numbertext">1 / 3</div>
+  <img src="./images/vh-foreground-outline.jpeg" style="width:100%">
+</div>
+<div class="mySlides1">
+  <div class="numbertext">2 / 3</div>
+  <img src="./images/vh-both-outlined.jpeg" style="width:100%">
+</div>
+<div class="mySlides1">
+  <div class="numbertext">3 / 3</div>
+  <img src="./images/vh-foreground-light-outline.jpeg" style="width:100%">
+</div>
+<a class="prev1" onclick="plusSlides1(-1)">❮</a>
+<a class="next1" onclick="plusSlides1(1)">❯</a>
+</div>
+<div style="text-align:center">
+  <span class="dot1" onclick="currentSlide1(1)"></span> 
+  <span class="dot1" onclick="currentSlide1(2)"></span> 
+  <span class="dot1" onclick="currentSlide1(3)"></span> 
+</div>
+<script>
+let slideIndex1 = 1;
+showSlides1(slideIndex1);
+function plusSlides1(n) {
+  showSlides1(slideIndex1 += n);
+}
+function currentSlide1(n) {
+  showSlides1(slideIndex1 = n);
+}
+function showSlides1(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides1");
+  let dots = document.getElementsByClassName("dot1");
+  if (n > slides.length) {slideIndex1 = 1}    
+  if (n < 1) {slideIndex1 = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex1-1].style.display = "block";  
+  dots[slideIndex1-1].className += " active";
+}
+</script>
+</html>
+
+
+
+
+<br>
 
 Giving an outline to the lakes in a color slightly darker than their fill emphasizes them nicely:
 
- <img src="./images/lakes-outline2.png" style="width:80%">
+<!--carousel styling and code adapted from W3schools-->
+<html>
+<link rel="stylesheet" href="../style.css">
+<div class="slideshow-container2">
+<div class="mySlides2">
+  <div class="numbertext">1 / 3</div>
+  <img src="./images/vh-lakes-no-outline.jpeg" style="width:100%">
+</div>
+<div class="mySlides2">
+  <div class="numbertext">2 / 3</div>
+  <img src="./images/vh-lakes-outline.jpeg" style="width:100%">
+</div>
+<div class="mySlides2">
+  <div class="numbertext">3 / 3</div>
+  <img src="./images/vh-lakes-outlined-zoom.jpeg" style="width:100%">
+</div>
+<a class="prev1" onclick="plusSlides2(-1)">❮</a>
+<a class="next1" onclick="plusSlides2(1)">❯</a>
+</div>
+<div style="text-align:center">
+  <span class="dot2" onclick="currentSlide2(1)"></span> 
+  <span class="dot2" onclick="currentSlide2(2)"></span> 
+  <span class="dot2" onclick="currentSlide2(3)"></span> 
+</div>
+<script>
+let slideIndex2 = 1;
+showSlides2(slideIndex2);
+function plusSlides2(n) {
+  showSlides2(slideIndex2 += n);
+}
+function currentSlide2(n) {
+  showSlides2(slideIndex2 = n);
+}
+function showSlides2(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides2");
+  let dots = document.getElementsByClassName("dot2");
+  if (n > slides.length) {slideIndex2 = 1}    
+  if (n < 1) {slideIndex2 = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex2-1].style.display = "block";  
+  dots[slideIndex2-1].className += " active";
+}
+</script>
+</html>
+
+
+
+ <!-- <img src="./images/lakes-outline2.png" style="width:80%"> -->
 
 
 
