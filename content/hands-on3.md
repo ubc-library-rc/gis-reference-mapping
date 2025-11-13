@@ -102,14 +102,16 @@ Turn on labels for Indigenous territories, and zoom to the Vancouver area.
 <img src="./images/overlap-zoomed-in_20250915.png" style="width:100%">
 
 
-<!-- If you wanted each province to have a different color, change the symbology from "Single Symbol" to "Categorized". Choose `PRENAME` as the value. Then click "Classify". 
+
+
+<br>
+Now you know how to change the symbology of a layer, either symbolizing all polygons the same color, or giving them each a unique color. If you wanted each province to have a different color, change the symbology from "Single Symbol" to "Categorized". Choose `PRENAME` as the value. Then click "Classify"
+
+Currently, they are all random colors. You can click each color square beside the province to individually change its color. Just like we practiced above, to edit all at once (for instance to remove the outlines of all provinces) hold the Shift key down as you select Alberta to Yukon, then click on "Symbol" at the top. Go down to "Simple Fill" and set the "Stroke style" to "No Line". Hit Apply in the main Symbology dialogue window to view the results.
 
 <img src="./images/classify-provinces-categorized-symbology_20250915.png" style="width:100%">
 
-Currently, they are all random colors. You can click each color square beside the province to individually change its color. To edit all at once, for instance to remove the outlines of all provinces, hold the Shift key down as you select Alberta to Yukon, then click on "Symbol" at the top. Go down to "Simple Fill" and set the "Stroke style" to "No Line". Hit Apply in the main Symbology dialogue window to view the results. 
-
-<img src="./images/categorized-symbology_20250915.png" style="width:100%"> -->
-
+<img src="./images/categorized-symbology_20250915.png" style="width:100%"> 
 
 <Br>
 
