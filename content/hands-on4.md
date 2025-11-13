@@ -208,20 +208,29 @@ function showSlides2(n) {
 
 
 
-### **Transparency** 
+----
+
+## Transparency
 
 Transparency allows overlapping layers to be seen, as well as lightens the overall hue of a layer. Transparency helps elements fade into the background, like the backing of a legend or a north arrow. 
 
   <img src="./images/line-transparency_20250915.png" style="width:60%">
 
-   
-- **Lettering** Lettering will come into play in the next step of adding text to a print layout, but it also matters when configuring labels from the main QGIS interface. Halos and buffers make text stand out, whereas you can use size and color of labels to send less relevant ones to the background. 
+Transparency also serves to de-accentuate things like outlines and text buffers. 
+
+----
+
+## Lettering
+
+Lettering will come into play in the next step of adding text to a print layout, but it also matters when configuring labels from the main QGIS interface. Halos and buffers make text stand out, whereas you can use size and color of labels to send less relevant ones to the background. 
 
 <img src="./images/labelling-example_20250917.jpeg" style="width:100%">
 
 While more comprehensive design work on your map can be managed in an illustration software like Inkscape or Adobe Illustrator, with some time and patience, a great deal of customization can be done right within QGIS. For example, categorizing features and styling their labels differently. In the above map, you'll notice I've added leader lines for the maritime provinces but not for the others. 
 
- 
+---
+
+## Practice
 
 To Do
 {: .label .label-green }

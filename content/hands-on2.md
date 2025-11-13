@@ -165,7 +165,7 @@ Make a spatial bookmark of Canada. If you've already zoomed to the provinces lay
 
 <br>
 
-You are now setup to begin mapping! Be sure to **SAVE YOUR PROJECT** before continuing on. Save from either the save icon in your toolbar or from the Project menu --> Save. 
+You are now setup to begin mapping! Be sure to **SAVE YOUR PROJECT** before continuing on. Save from either the save icon in your toolbar or from the **Project menu** --> **Save**. 
 
 
 

@@ -48,9 +48,9 @@ To change the dimensions of the page, go to "Page Properties..." by right-clicki
 
 To Do
 {: .label .label-green }
-Let's set the page dimensions for today's map to be 8.5 x 11 inches — the size of a sheet of copy paper. We'll keep the orientation set to Landscape. 
+Let's set the page dimensions for today's map to be A4. We'll keep the orientation set to Landscape. 
 
-To change the dimensions, click the **Size** drop-down options and select "Letter". To set custom dimensions, choose "Custom" size at the very bottom of the drop-down. This will activate the Height and Width input boxes. If setting a custom size via Height and Width, remember to include the units for these dimensions. In this way, you can set very specific dimensions depending on the criteria of your publisher.
+To change the dimensions, click the **Size** drop-down options and select "A4". To set custom dimensions, choose "Custom" size at the very bottom of the drop-down. This will activate the Height and Width input boxes. If setting a custom size via Height and Width, remember to include the units for these dimensions. In this way, you can set very specific dimensions depending on the criteria of your publisher.
 
 <img src="./images/page-properties_20250916.png" style="width:100%">
 

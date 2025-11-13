@@ -6,7 +6,7 @@ has_children: true
 ---
 
 # Hands On
-This section will guide you through making simple, static reference maps for academic publication. Because making maps for academic publication often requires downloading, modifying, and synthesizing data from the web, you will practice retrieving data from Natural Earth and Statistics Canada. However, the QGIS project is already set up for you. If you haven't already, pleas **download and unzip the workshop folder**. Remember to download it to a location on your physical computer, like Desktop or Downloads. *Do not download it to OneDrive*. 
+This section will guide you through making simple, static reference maps for academic publication. Because making maps for academic publication often requires downloading, modifying, and synthesizing data from the web, you will practice retrieving data from Natural Earth and Statistics Canada. However, the QGIS project is already set up for you. If you haven't already, please **download and unzip the workshop folder**. Remember to download it to a location on your physical computer, like Desktop or Downloads. *Do not download it to OneDrive*. 
 
 <!-- Note about working with vector data. Add note about making screen 110% at least because  new updated workshop website template makes everything smaller.  -->
 
