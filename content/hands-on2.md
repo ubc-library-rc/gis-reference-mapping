@@ -58,6 +58,7 @@ Add the layers to your map *in the following order*.
 2. `ne_50m_admin_0_countries.shp` (World Countries at medium scale from Natural Earth)
 3. `lpr_000b16a_e.shp` (Canadian Provinces from Statistics Canada)
 4. `ne_50m_lakes.shp` (World Lakes and Reservoirs at medium scale from Natural Earth)
+5. `ottawa.geojson` (The point you created for Ottawa; it might still be called `map.geojson`.)
 
 If for any reason you weren't able to download the necessary data, those files will be in the `backup-data` folder. Just remember to unzip them.
  
@@ -114,6 +115,8 @@ For more on Coordinate Reference Systems, see [here](https://ubc-library-rc.gith
 Although this workshop works with only a handful of layers, some projects require you to juggle more than 10 layers. Having strategies to stay organized is therefore important. Additionally, layers that cover the entire earth are quite large and require lots of processing power to load anew each time you pan and zoom around your map canvas. Best practice is therefore to "hide" or "turn off" layers you aren't using so as not to slow your computer down. Below are some tips to stay organized.
 
 - **Rendering order** Note that we added layers to our project in a very specific order. This is because QGIS will render layers from the top down, meaning the layers to the top of your Layers Panel list will sit above the layers below. We added provinces and then lakes so that provinces could be seen above countries, and lakes above provinces. You can reorder your layers at any time by dragging them up or down. 
+
+     > Drag `ottawa.geojson` to the top of your layers. 
 
 - **Turning layers on and off** Turn layers on and off (or hide and show them) by clicking the little checkbox beside each layer. If you've added a layer but don't see it rendered, it is likely underneath another layer. Rather than rearranging every layer until you find it, you can successively turn each layer off until you find the one you're looking for.  
 
