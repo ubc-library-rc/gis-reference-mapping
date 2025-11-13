@@ -1,59 +1,65 @@
 ---
 layout: default
-title: Insets
+title: Selections 
 nav_order: 9
 parent: Additional Content
 ---
-# Insets
+# Selections 
+Perhaps you only want to use a portion of the data downloaded, such as a specific province or country. This extended tutorial will show you how to run selections on your data from inside QGIS, and export selected features as a new dataset. 
 
-Insets are maps nested within maps which either zoom-in to show a particular area in greater detail, or zoom-out to contextualize the area of interest within broader geographical context. 
+### Case Scenario: Map of British Columbia
+Say you wanted to create a map of British Columbia, where the rest of the Canadian provinces serve as the basemap. You probably want to style British Columbia differently than the other provinces, which is difficult to do when they are all one data layer. 
 
-This page will demonstrate how to create map insets using British Columbia as an example. If you did not create a data layer of *just* British Columbia in the prior page on selections, please add the file `british-columbia.geojson` to your map now. 
+One solution is to create a new data layer that is *just* British Columbia. We can do this by running a simple select and exporting this selection to a new file. 
 
-## Establishing focus area
-Zoom in to British Columbia and style it appropriately if needed. 
+## Select features
+There are many kinds of selections you can run, and many ways to go about selecting. When the goal is to select a polygon feature, the easiest is to just select it by clicking. In your toolbar, there should be a set of selection tools. If not, right-click on the toolbar greyspace and add the Selection Toolbar. 
 
-Create a new Print Layout and call it `BC-map`. Add your current map to the layout. For this map, Portrait is the best layout orientation. Adjust the scale as needed to something lke `7000000`. 
+Click on the first icon, "Select features by area or single click".
 
-<img src="./images/inset-layout2_20251102.png" style="width:100%">
+<img src="./images/selection-tool_20251102.png" style="width:100%">
 
-Use the **Move item content** tool to drag BC to the left of your map, creating a spot for an inset on the upper right-hand corner. Before working any further, go ahead and **Save** your Print Layout.
 
-In the **Items list **, double click your Map 1 to rename it to `Main map`. Then, add another map to the upper right-hand corner. Rename this map `Inset`. 
+Then, with the Select tool activated, click on British Columbia. It should become highlighted. 
 
-<img src="./images/inset-add2_20251102.png" style="width:100%">
+- If you open the Attribute Table of `Provinces`, you should see British Columbia is also highlighted there. Note that selections only work on layers that are turned on. Not also that while British Columbia was selected, the `Countries` layer beneath it was not. In order to select a layer it must be visible and selected in the Layers Panel.  
 
-Adjust the scale of your inset map so that the entirety of Canada is visible, to something like `50000000`, and use the Move item content tool again to center the inset content. 
+<img src="./images/selection-highlighted_20251102.png" style="width:100%">
 
-<img src="./images/inset-map2_20251102.png" style="width:80%">
 
-You can now add neatlines and labeling to both maps. Note that the map scalebar and north arrow should be for the Main map. In some instances, for example when you are creating an inset to zoom in on an area of a thematic map, a scalebar/north arrow for the inset as well is warranted.
+## Export selection
+Once you've selected British Columbia, you can Export your selection as a new file. Right click `Provinces` in the Layers Panel and go to **Export --> Save selected features as...**. Be sure to give your new layer both a name *and* location. Your new layer of just British Columbia should automatically load to your QGIS project. If it doesn't, add it now. 
 
-You may notice that the `Lakes` layer is only visible on the main map. This is because it is quite distracting to have all the lakes in a zoomed-out map. To get a layer showing up in only one map, turn the layer off in your main QGIS interface and then update the map preview for only the inset.  <img src="./images/inset-update-map-preview_20251102.png" style="width:1%">
+<img src="./images/selection-export_20251102.png" style="width:100%">
+
+
+Importantly, you must now cancel your selection on the `Provinces` layer. Then, click hand icon to return your cursor the pan map tool. This will ensure you don't make more unintentional selections. 
+
+<img src="./images/selection-cancel_20251102.png" style="width:100%">
 
 <br>
 
-You can also create leader lines from an area to the inset that's zooming in. However, be sure the inset is the same shape of an area locator and contains exactly what is inside it. 
+## To adjust or not to adjust projections
+Notice that when you zoom-in to British Columbia, the province might seem to be rotated at an angle. That's because your project is still likely set to a projection that works well for the entire country, but not so well for a single province. 
 
+<img src="./images/bc-zoom_20251102.png" style="width:80%">
 
+From the **Project** menu go to **Properties** and change the project's **CRS** to `NAD83 / UTM zone 10N`. Zoom to British Columbia again. You may need to use the zoom tools to properly zoom in. 
 
+<img src="./images/bc-reprojected_20251102.png" style="width:80%">
 
-<!-- 
-maybe just use map from before. and if selected and exported BC, all the better.
-of British Columbia with an inset showing Canada. Will be in black and white. (or choose something else like using the Native Land digital data)
+Now however, you'll notice the ocean has disappeared and is now symbolizing the surrounding countries layer. Go ahead and zoom-to the `Ocean` layer to see what happened. Essentially, when we changed the project's CRS from something that worked for world-wide layers to a projection that suited British Columbia specifically, it distorted the other layers including `Ocean`, `Countries` and `Lakes`. 
 
-here is what it will look like below. 
+<img src="./images/ocean-distorted_20251102.png" style="width:80%">
 
-![inset map](./images/bc-map-demo.jpeg)
+You have a couple of options. Because everything except oceans is visible when you zoom close to British Columbia, you could just choose to exclude oceans and add a background color instead to simulate the ocean. Or, you could change the project projection back to `NAD83 / Statistics Canada Lambert`. 
 
-Considerations. 
-Where to locate it. 
-Adding a frame or call out. 
-Leader lines
+## Map styling
+Now you can style British Columbia with visual hierarchy in mind. 
 
-Zooming in, scale. If zooming out, no scale. 
-When to use a north arrow. 
+<img src="./images/selection-styling_20251102.png" style="width:80%">
+<br>
 
-Inset might have different projection.  
+----
 
-Show example map I made.-->
+<!-- ## Alternative - style by expression -->

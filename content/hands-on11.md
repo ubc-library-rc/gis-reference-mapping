@@ -1,83 +1,114 @@
 ---
 layout: default
-title: Proportional Symbol Maps
+title: Choropleth Maps
 nav_order: 11
 parent: Additional Content
 ---
-# Proportional Symbol Maps
+# Thematic Mapping
 
-Proportional symbol maps are useful to visualize the quantity of something across respective locations. Choropleth maps use a color gradient to convey value differentials, whereas proportional symbol maps use symbol size. Proportional symbols are quite intuitive, and can be combined with other parameters like color and lettering size to provide rich spatial information. Proportional symbols can even be layered atop a choropleth map. See [Axis Maps](https://www.axismaps.com/guide/proportional-symbols) for a guide to proportional symbol maps. 
+The following pages will guide you through how to adjust your symbology in QGIS to make a thematic map. The data is already prepared for you in the `thematic-mapping` subfolder of your workshop data folder. Before you begin,
+1. Be sure to remove or hide all global layers, and
+2. Change the project's **CRS** to `NAD83 / UTM zone 10N`.
+3. Having a web-based basemap for reference can be helpful as well. 
+4. If the `reference-mapping-workshop` data folder is not already connected as a favorite directory in your Browser Panel, connect it now. 
 
-Note: In most cases you *do not* normalize values when using proportional symbols, as that would reduce the range in difference. If anything, it can be useful to exaggerate the range slightly. While Absolute Scaling renders symbols increasingly larger along a linear scale, Perceptual/Apparent Scaling compensates for the eye's tendency to reduce difference in sizes close together. [See here for more](https://makingmaps.net/2007/08/28/perceptual-scaling-of-map-symbols/). 
+## Choropleth maps
+Choropleth maps are useful to show and compare the density, frequency, or quantity of a value generalized across standardized geographic areas (such as zip-codes, provinces, or countries). Unless you specifically want to emphasize differences in total number of events/data points, it is best practice to normalize your data when choropleth mapping. Normalization is when you divide the values for each geographic area by something like the area in square kilometers or total population of that area. For instance, mapping winter flu cases across census tracts in British Columbia, you'd want to normalize the total cases in each census tract by that tract's total population. Normalization enables better comparison across multiple geographic areas. 
 
-![prop symbol map](./images/chestnut-proportional-symbol.jpeg)
+The map below shows total chestnut street trees per Vancouver neighborhood.  
 
-<!-- https://schoolofcities.github.io/urban-data-storytelling/urban-data-visualization/proportional-symbol-maps/proportional-symbol-maps.html -->
+![chropleth map](./images/chestnut-choropleth-map.jpeg)
 
 ----
 
-## Making a proportional symbol map in
-You can make proportional symbol maps in QGIS simply by converting polygons to centroids (if not already points) and then going to symbology and choosing Graduated. The following documentation breaks down how to do this. 
-<br>
+## Making a choropleth map 
 
-*1*{: .circle .circle-yellow} To make a proportional symbol map like the above, where symbol size corresponds to the number of chestnut trees per neighborhood, we first need to run the **Centroids** tool on the `chestnut-count` polygon layer. You can also find the results of this in the `thematic-mapping` subfolder. Either create a centroids layer, or add the file `chestnut-count-centroids.geojson` to your project. 
+*1*{: .circle .circle-yellow}  Add the file `chestnut-count.geojson` from within the thematic-mapping subfolder of your workshop data folder. Zoom-to the layer. (If your map looks wonky, be sure you've set the project CRS to `NAD83 / UTM zone 10N` from Project menu --> Properties --> CRS.)
 
-<img src="./images/proportional-symbol-centroids_20251102.png" style="width:100%">
+<img src="./images/choropleth-default_20251102.png" style="width:100%">
 
 <br>
 
-*2*{: .circle .circle-yellow} Open the layer properties. 
-> - Change the symbology type to **Graduated**. 
-> - Set the **Value** to `chestnut-trees`. 
-> - Then, change method to **Size**. 
-> - Update the maximum size to at least `20`. Then, hit **Classify** and **Apply**. 
+*2*{: .circle .circle-yellow} The default color may differ in your QGIS project, but once loaded, your layer will something like this. The layer shows Vancouver neighborhoods, but just by looking at it, we can't tell much more. Open the **Attribute Table** of the newly added `chestnut-count` layer. 
 
-<img src="./images/proportional-symbol-properties_20251102.png" style="width:100%">
+<img src="./images/choropleth-attribute-table_20251102.png" style="width:80%">
+
+Here we can see there are three Fields, one for the neighborhood name, one for its geometry, and a final column storing the number of total chestnut street trees in each neighborhood. *We know this is stored as a number because the contents of this column are right justified.* 
+
+If you are interested in how these counts were calculated, see our [Introduction to QGIS](https://ubc-library-rc.github.io/gis-intro-qgis/) which will take you step-by-step through creating this dataset. 
+
+<br>
+
+*3*{: .circle .circle-yellow} Remember, a choropleth map visualizes different values across standard geographic areas through gradations in color. So, what we need to do is change the **Symbology** of the `chestnut-count` layer to render visible values in the `chestnut-trees` column.
+
+- Open the layer Symbology of `chestnut-count` (Right-click the layer in the Layers Panel --> Properties --> Symbology). 
+
+- At the top of the **Layer Properties - Symbology** window, we can see the layer `chestnut-count` is currently being symbolized by a **Single Symbol**. Click **Single Symbol** to change this. From the drop-down options that appear, select **Graduated**.
+
+<img src="./images/choropleth-layer-properties_20251102.png" style="width:80%">
+
+<br>
+
+*4*{: .circle .circle-yellow} Now we have to indicate what value the layer should be used to build the symbology gradient. Because `chestnut-trees` is the only numerical field in the Attribute Table, when you click the drop-down options for **Value**, `chestnut-trees` is the only value you can choose. Choose it. 
+
+<br>
+
+*5*{: .circle .circle-yellow} **Precision** refers to how many decimals you want to include, and checking the **Trim** box removes trailing zeros from the legend. Because we are dealing with whole numbers of trees, so long as **Trim** is checked it doesn't matter the precision.
+
+    
+<br>
+
+*6*{: .circle .circle-yellow} You can select a color ramp from the given options, or design your own. Hover over "All Color Ramps" to see all options. For now, change the color ramp to `oranges` from All Color Ramps.  
 
 
 <br>
 
-*3*{: .circle .circle-yellow} Just like in the previous page, you can change the classification mode. 
+*7*{: .circle .circle-yellow} So far, we've set up the symbology but we have to apply it to our values. Click **Classify** to classify the `chestnut-trees` values. (If nothing shows up, make sure you've set the **Value** to the numerical field `chestnut-count`.)
+
+<img src="./images/choropleth-classify_20251102.png" style="width:80%">
 
 
-*4*{: .circle .circle-yellow} To change the symbol symbology, click on **Symbol** option and then select "Simple Marker".
+Hit **Apply** to see you map change. 
 
-<img src="./images/proportional-symbol-symbol_20251102.png" style="width:100%">
+While the default classification mode is set to **Equal Count (Quantile)**, you can choose amongst different classification modes. Classification modes determine how the distribution of data are grouped or "classified", and therefore which values are associated with which colors. You can also increase or decrease the number of classes. Between 5 and 7 is best practice. Read more about different classification modes [here](https://pro.arcgis.com/en/pro-app/latest/help/mapping/layer-properties/data-classification-methods.htm). 
+
+If you toggle to the **Histogram** tab, you can **Load Values** to see the distribution of `chestnut-trees` values. The X-axis indicates number of chestnut trees whereas the Y-axis, "Count", refers to the number of neighborhoods with this number of chestnut trees. The number of bins refers to how granularly the number line is broken down. Currently there are 30 bins—from 0 to 400—meaning any neighborhood with a count that isn't a multiple of 5 will be split. 
 
 
-<img src="./images/proportional-symbols_20251102.png" style="width:100%">
+Play around with different classification modes. You can also create your own intervals manually by simply double clicking the values and editing the number bounds. Or, you can adjust a given classification mode by dragging the class lines in the histogram.
 
 <br>
 
-*5*{: .circle .circle-yellow} You can add Labels from the layer Properties as well, setting **Single Labels** according to the **Value** `chestnut-trees`. Adding a **Buffer** or adjusting the font color, and changing the **Placement** mode to "Offset from Point" will allow you to visualize the number above the symbol. 
 
-<img src="./images/proportional-symbol-map_20251102.png" style="width:100%">
+## Styling your choropleth map
 
+You can save and load symbology styles. Try loading the symbology style, stored in the thematic-mapping subfolder, called `gradient-style.qmd`. 
 
-
-
-
+<img src="./images/cartogram-load-style_20251102.png" style="width:90%">
 
 
+<img src="./images/cartogram-style-filepath_20251102.png" style="width:50%">
 
 
-
-
+<img src="./images/cartogram-style-loaded_20251102.png" style="width:80%">
 
 <br><br>
 
-### Proportional symbol maps by hand
-Alternatively, if you want to spend extensive time styling your map and proportional symbols manually, you can export centroids (and other geographic layers) as an `.svg` file and open it in an illustration software like Adobe Illustrator or [Inkscape](https://inkscape.org/). The formula for *radius* of proportional symbols in absolute scaling is as follows: 
-> r<sub>C</sub> = (v<sub>C</sub> / v<sub>L</sub>) <sup>0.5</sup> * r<sub>L</sub>
-<br>
+## Adding a Legend
+In a Print Layout, add a legend from the *Add Items** menu at the top of your screen. Only features symbolized by your map should be included in your legend. To remove extraneous layers and rename existing layers, first **uncheck the ‘Auto update’ box.** Now select a layer you want to remove from your legend and click the red –– button at the bottom. To rename a layer, simply double click it. Click the < back arrow to return to Legend Item Properties
 
-> where r<sub>C</sub> is the radius of the circle to be calculated,<br>
-> r<sub>L</sub> is the radius of the largest circle,<br>
-> v<sub>C</sub> is the data value of the circle to be calculated, and<br>
-> v<sub>L</sub> is the data value of the largest circle<br>
+You can add a Background or Frame to your Legend by scrolling down in the Item properties. Note that a legend does not need a title "Legend".
 
-For perceptual scaling, increase the exponent to 0.57.   
+<img src="./images/choropleth-legend_20251102.png" style="width:80%">
 
-Formula Credit: *Slocum TA et al. Thematic Cartography and Geovisualization. 4th Ed. Boca Raton, FL: CRC Press, Taylor & Francis Group. 2023.* For more, see Chapter 18 ("Proportional Symbol Mapping") of UBC Library's e-book edition.
 
----- 
+
+![add legend gif](./images/choropleth-legend_20251102.gif)
+
+
+Note: If you have many layers you don't want to include in your legend because they aren't part of your map, but aren't ready to remove from your project, you can create a group in the Layers Panel and add them there. That way, when it's time to edit the legend, you can remove the entire group. 
+
+
+ 
+
+
