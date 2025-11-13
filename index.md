@@ -27,16 +27,16 @@ This workshop is geared towards mapping novices. If you want to create  a map th
 <html>
 <link rel="stylesheet" href="./style.css">
 <div class="slideshow-container">
-<div class="mySlides fade">
+<div class="mySlides">
   <div class="numbertext">1 / 3</div>
-  <img src="./content/images/canada-map-demo.jpeg" style="width:100%">
+  <img src="./content/images/canada-map-multicolor.jpeg" style="width:100%">
   <!-- <div class="text">Caption Text</div> -->
 </div>
-<div class="mySlides fade">
+<div class="mySlides">
   <div class="numbertext">2 / 3</div>
-  <img src="./content/images/canada-map-multicolor.jpeg" style="width:100%">
+  <img src="./content/images/canada-map-example_20251113.jpeg" style="width:100%">
 </div>
-<div class="mySlides fade">
+<div class="mySlides">
   <div class="numbertext">3 / 3</div>
   <img src="./content/images/native-land-map.jpeg" style="width:100%">
 </div>
