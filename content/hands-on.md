@@ -19,7 +19,7 @@ Finally, though the following workflow and technical documentation will focus on
 <br>
 
 
-Here is an example of the map we will make, styled in different ways.
+Here is an example of the map we will make, styled in different ways:
 
 ![canada map](./images/canada-map-example_20251113.jpeg)
 

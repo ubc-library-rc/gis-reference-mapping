@@ -23,3 +23,13 @@ This page is in development and not yet complete.
 {:toc}
 </details>
 ----
+<!-- 
+## Creating a Vector Layer in QGIS
+There are two steps to creating a new vector layer in QGIS. First, you have to name and save an empty vector layer. Then, you'll add it to your project, toggle on editing mode, and draw the vertices of the shape. Then save. 
+start with point - if you didnt collect in csv - how to create here. 
+consideration - setting projection
+about points - 
+polygon shapefile - from basemap
+point - from point - consider projection in both scenarios (put as end Geocoding 
+see plugins workshop
+see workshop  -->
