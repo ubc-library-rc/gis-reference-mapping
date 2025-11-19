@@ -45,4 +45,4 @@ Spatial data have different file extensions that you may be used to. Raster data
 - [Vector Analysis in QGIS, by QGIS](https://docs.qgis.org/3.40/en/docs/training_manual/vector_analysis/index.html)
 - [QGIS Training Manual - Raster Module](https://docs.qgis.org/3.40/en/docs/training_manual/rasters/index.html)
 - [Considerations for downloading data](https://ubc-library-rc.github.io/gis-spatial-stories/content/resources-for-data-assembly.html)
-- [Add resource or demo page on loading csv data into QGIS]
+- [Loading CSV Data](./hands-on7.md)
