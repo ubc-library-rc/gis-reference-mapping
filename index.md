@@ -5,9 +5,6 @@ nav_order: 1
 has_children: true
 ---
 
-This workshop is in development and not yet complete.
-{: .note}
-
 # Reference Mapping for Academic Publication
 
 This workshop will provide an overview of how to create simple, static reference maps to accompany academic publications. We will use [QGIS](https://qgis.org/), a free and open-source Geographic Information System (GIS) for analyzing, modifying, and visualizing spatial data.  
