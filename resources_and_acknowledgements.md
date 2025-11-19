@@ -30,11 +30,3 @@ Please take a moment to explore [native-land.ca](https://native-land.ca/) so tha
 <iframe src="https://native-land.ca/api/embed/embed.html?maps=territories&position=49.244770894278666, -123.16698232306474&key=AADlPNbKCBAepz816odRT" style="width:100%; height:400px; border:none;"></iframe>
 
 
-----
-## Creating data sets
-quick demo
-
-
-## Geocoding 
-see plugins workshop
-see workshop 
