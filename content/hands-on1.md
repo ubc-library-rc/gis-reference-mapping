@@ -7,7 +7,7 @@ parent: Hands On
 # Gathering Data 
 {: .no_toc}
 
-So where do you find spatial data? Maybe you already have some, maybe you're still searching. A lot of spatial data is accessible via the internet, albeit under different licenses. 
+In the [Introduction to Mapmaking with QGIS](https://ubc-library-rc.github.io/gis-mapping-intro/), you learned about spatial data. Where, then, do you find spatial data? Maybe you already have some, maybe you're still searching. A lot of spatial data is accessible via the internet, albeit under different licenses. 
 
 <details open markdown="block">
   <summary>

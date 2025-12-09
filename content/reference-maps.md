@@ -11,13 +11,11 @@ Maps can be digital, web-based, or physical. Many projects incorporate more than
 Reference maps, like any map, should have at minimum an explanatory title, north arrow, scale, legend, map author and data source statement. If there are only one or two data layers which are intuitively symbolized and clearly marked, a legend is sometimes unnecessary. 
 
 
-<!-- ![libraries and parks example map](./images/ex-libraries-parks.jpeg) -->
 ![libraries and parks example map](./images/parks-libraries_20251106.jpeg)
 
 
 <img src="./images/ubc-campus-demo.jpeg" style="width:55%">
-<!-- ![satellite imagery map](./images/Conservation-Area-2.jpeg)
-<sup>The above satellite imagery reference map was made by the workshop author for a colleague's dissertation.</sup> -->
+
 
 
 <br>

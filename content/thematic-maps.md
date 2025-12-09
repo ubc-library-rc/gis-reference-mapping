@@ -36,7 +36,8 @@ Note: In most cases you *do not* normalize values when using proportional symbol
 
 ![prop symbol map](./images/chestnut-proportional-symbol.jpeg)
 
-<!-- https://schoolofcities.github.io/urban-data-storytelling/urban-data-visualization/proportional-symbol-maps/proportional-symbol-maps.html -->
+#### Resources 
+- More on [Proportional symbol maps](https://schoolofcities.github.io/urban-data-storytelling/urban-data-visualization/proportional-symbol-maps/proportional-symbol-maps.html)
 
 
 ---- 
