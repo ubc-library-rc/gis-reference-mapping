@@ -36,7 +36,6 @@ Reference maps, like any map, should have at minimum an explanatory title, north
 <img src="./images/ubc-campus-demo.jpeg" style="width:55%">
 
 
-
 <br>
 
 Other reference maps include road atlases, pocket atlases, or transport specific maps such as the below cycling map of Vancouver. The reference map most often used in your everyday is Google Maps. 
@@ -115,6 +114,14 @@ There is a case to be made that all maps are thematic, as the definition of boun
 
 <br>
 
+
+### Static or dynamic?
+{: .no_toc}
+While outside the remit of this workshop, may be important to you is whether your map is static or dynamic. Both reference maps and thematic maps can be either static or dynamic. Static maps tell a spatial story at a single scale. Static maps can be exported/stored/formatted as an image (.jpeg or .png), can be exported as a pdf, printed or embedded digitally into website or online publication. They can also be included in an academic paper, poster, or flyer. Dynamic maps, on the other hand, allow the user to interact with your spatial story. Dynamic display data in an interactive fashion, allowing viewers to pan around and zoom in and out to reveal more information at different scales. This workshop focuses on static reference maps. If you're interested in webmapping, our resources for [webmapping with QGIS Plugins](https://ubc-library-rc.github.io/gis-plugins-qgis/content/webmapping.html) workshop, [webmapping with Leaflet](https://ubc-library-rc.github.io/gis-intro-leaflet/), and our[overview of webmapping tools](https://ubc-library-rc.github.io/gis-spatial-stories/content/resources-web-mapping.html).
+
+
+<br>
+
 ----
 
 ## Tools for Static Mapping
@@ -123,8 +130,7 @@ There are many tools for mapping suited to a range of skillsets. Today's worksho
 <!-- If you're interested in spending more time honing the aesthetics of your map, you can always export a rudimentary map from QGIS and conduct advanced editing in a graphics illustration software such as Adobe Illustrator or its open-source alternative, [Inkscape](https://inkscape.org/).  -->
 
 
- 
-----
+
 
 
 ## Geographic Information Systems (GIS) 
@@ -146,7 +152,7 @@ With that in mind, there are 3 main forms of GISs:
 
 [QGIS](https://qgis.org/) is a popular desktop GIS software, and considered a free and open source software (FOSS) with a very active developer community. Take a moment to browse their website.
 
-## QGIS Advantages  ⇡
+### QGIS Advantages  ⇡
 {: .no_toc} 
  - QGIS is free and open source, meaning you can download it directly from the web to your personal computer. 
  - QGIS runs on Windows, Mac, Linux, operating systems, meaning you don't need a specific kind of device to use it. Some proprietary and costly software, such as ArcGIS, only run on Windows computers making it difficult to use without specialized equipment. 
@@ -155,7 +161,7 @@ With that in mind, there are 3 main forms of GISs:
  - QGIS has an active development and user communities, meaning people are constantly posing and answering questions on platforms such as Reddit,  StackExchange, and YouTube. This makes troubleshooting a whole lot easier. There is also an annual [QGIS User Conference](https://uc2026.qgis.org/activities/)!
  - QGIS has a robust [plugin](https://plugins.qgis.org/) repository for extended functionality. This means the application you download to begin with doesn't contain every single tool available, just the necessary and commonly used ones. 
 
-## QGIS Disadvantages ⇣
+### QGIS Disadvantages ⇣
 {: .no_toc} 
  - Most recent features can be buggy, which is why we recommend always downloading the latest Long Term Release, often small hyperlink below main download button. 
  - Plugins lack standardized documentation as they are largely user-community developed and contributed
@@ -163,18 +169,12 @@ With that in mind, there are 3 main forms of GISs:
  - Not ideal for more elaborate spatial analysis or network analysis workflows. 
 
 
-## QGIS Resources 
+### QGIS Resources 
 {: .no_toc} 
-QGIS itself has extensive online documentation, including a robust [User Guide](https://docs.qgis.org/3.40/en/docs/user_manual/index.html) *and* [Training Manual](https://docs.qgis.org/3.40/en/docs/training_manual/index.html). 
-    
-QGIS also has a vibrant user community, with answers to nearly any question you might have only a web search away. Many helpful tutorial demonstrations can be found on Youtube. For instance, [CWU Geography](https://www.youtube.com/@cwugeography3290) offers especially clear and helpful content, but there are many, many others.
+- QGIS itself has extensive online documentation, including a robust [User Guide](https://docs.qgis.org/3.40/en/docs/user_manual/index.html) *and* [Training Manual](https://docs.qgis.org/3.40/en/docs/training_manual/index.html). 
+- QGIS also has a vibrant user community, with answers to nearly any question you might have only a web search away. Many helpful tutorial demonstrations can be found on Youtube. For instance, [CWU Geography](https://www.youtube.com/@cwugeography3290) offers especially clear and helpful content, but there are many, many others.
 
 <br><br>
-
-
-## Static or dynamic?
-While outside the remit of this workshop, may be important to you is whether your map is static or dynamic. Both reference maps and thematic maps can be either static or dynamic. Static maps tell a spatial story at a single scale. Static maps can be exported/stored/formatted as an image (.jpeg or .png), can be exported as a pdf, printed or embedded digitally into website or online publication. They can also be included in an academic paper, poster, or flyer. Dynamic maps, on the other hand, allow the user to interact with your spatial story. Dynamic display data in an interactive fashion, allowing viewers to pan around and zoom in and out to reveal more information at different scales. This workshop focuses on static reference maps. If you're interested in webmapping, our resources for [webmapping with QGIS Plugins](https://ubc-library-rc.github.io/gis-plugins-qgis/content/webmapping.html) workshop, [webmapping with Leaflet](https://ubc-library-rc.github.io/gis-intro-leaflet/), and our[overview of webmapping tools](https://ubc-library-rc.github.io/gis-spatial-stories/content/resources-web-mapping.html).
-
 
 
 ----
