@@ -7,7 +7,7 @@ has_children: true
 
 # Reference Mapping for Academic Publication
 
-In this beginner-friendly workshop, you will learn how to create simple, static reference maps to accompany academic publications. We will use [QGIS](https://qgis.org/), a free and open-source Geographic Information System (GIS) for analyzing, modifying, and visualizing spatial data. By the end of this workshop, you will have the confidence to:
+In this beginner-friendly workshop, you will learn how to create simple, static reference maps such as those to accompany academic publications. We will use [QGIS](https://qgis.org/), a free and open-source Geographic Information System (GIS) for analyzing, modifying, and visualizing spatial data. By the end of this workshop, you will have the confidence to:
 
 <!-- This workshop is geared towards mapping novices. If you want to create  a map that geographically contextualizes your study area, or have a project involving data with a spatial component you're eager to visualize, this workshop is for you.  While making such maps on your own can feel daunting, this workshop will give you the confidence to: -->
 
@@ -73,14 +73,14 @@ function showSlides(n) {
 
 
 
-Why make your own reference map? While maps of your research area may already exist, they often have licenses that prohibit their republication elsewhere. Alternatively, you might want to show a location specific to your research, or mark the sites where fieldwork was conducted. Although the use of existing maps is frequently restricted, the data used to create them is often readily available. This means you can make your own map with it!
+Why make your own reference map? While maps of your research area may already exist, they often have licenses that prohibit their republication elsewhere. Alternatively, you might want to show a location specific to your research, or mark the sites where fieldwork was conducted. Although the use or reproduction of existing maps is frequently restricted, the data used to create them is often readily available. This means you can make your own map with it!
 
 ---
 ## Before the Workshop!!
 
-1. **Review our Introduction to Mapmaking with QGIS** Please note that the fundamental skills and concepts pertaining to spatial data, map types, and the QGIS interface will *not be* covered during this workshop. Therefore, prior to the workshop date, please review our *[Introduction to Mapmaking with QGIS](https://ubc-library-rc.github.io/gis-mapping-intro/)*. **Review of this resources *is required* for workshop attendance.** 
+1. **Review our Introduction to Mapmaking with QGIS** Please note that the fundamental skills and concepts pertaining to spatial data, map types, and the QGIS interface will *not be* covered during this workshop. Therefore, prior to the workshop date, please review our *[Introduction to Mapmaking with QGIS](https://ubc-library-rc.github.io/gis-mapping-intro/)*. **Review of this resources *is required* prior to workshop attendance.** 
 
-2. **Make sure you've downloaded QGIS** QGIS can be downloaded from [qgis.org's Downloads page](https://qgis.org/en/site/forusers/download.html). In most cases, you'll want to download and install the **Long term release** instead of the latest release - currently **QGIS 3.40.4 'Bratislava'**. This will give you most of the functionality you'll need without encountering the software bugs of newly released versions. See the subpage to this page **[installing QGIS](./installing-qgis.md)** for further guidance. 
+2. **Make sure you've downloaded QGIS** QGIS can be downloaded from [qgis.org's Downloads page](https://qgis.org/en/site/forusers/download.html). In most cases, you'll want to download and install the **Long term release** instead of the latest release - currently **QGIS 3.40.4 'Bratislava'**. This will give you most of the functionality you'll need without encountering the software bugs of newly released versions. See the subpage to this page <a href="./installing-qgis.html" target="_blank"><b>Installing QGIS</b></a> for further guidance. 
 
 2.  **Download and unzip the workshop data folder** below. Download it to a folder on your physical computer, such as Desktop or Downloads, _not_ OneDrive.
 
@@ -96,7 +96,7 @@ If you're coming to this workshop with your own data in-hand, be sure to move it
 
 **Geospatial novices welcome!** This workshop is geared towards mapping novices. If you want to create a map that geographically contextualizes your study area, or have a project involving data with a spatial component you’re eager to visualize, this workshop is for you. However, we ask that you please take an hour to review our [Introduction to Mapmaking with QGIS](https://ubc-library-rc.github.io/gis-mapping-intro/) prior to the workshop. 
 
-For a further introduction, you are welcome to explore our [Intro to QGIS](https://ubc-library-rc.github.io/gis-intro-qgis/), [Tools and Workflows in QGIS](https://ubc-library-rc.github.io/gis-tools-workflows/), and [Plugins in QGIS](https://ubc-library-rc.github.io/gis-plugins-qgis/) offerings _in that order_.
+For a more comprehensive introduction, you are welcome to explore our [Intro to QGIS](https://ubc-library-rc.github.io/gis-intro-qgis/), [Tools and Workflows in QGIS](https://ubc-library-rc.github.io/gis-tools-workflows/), and [Plugins in QGIS](https://ubc-library-rc.github.io/gis-plugins-qgis/) offerings _in that order_.
 
 If your goal is to map your research area or visualize research data, this workshop is for you. However, if you are looking to conduct spatial analysis on your data, we recommend the QGIS workshops listed above. If you realize you actually want to make interactive and dynamic web-based maps that can be embedded in a website or shared via a link, check out our [Webmapping Workshop](https://ubc-library-rc.github.io/gis-intro-leaflet/).
     
@@ -114,5 +114,5 @@ Finally, if you don't know what kind of output you want just yet, we encourage y
 - Contact UBC Library’s Geospatial team: `library.gis@ubc.ca`
 - Schedule a 1:1 consult with the geospatial team [here](https://libcal.library.ubc.ca/appointments/research_commons#s-lc-public-pt)
 
-<p style="margin-top:90px"></p>
+<p style="margin-top:50px"></p>
 <p style="color:grey; font-size:13px">This workshop was authored by <a href="https://geog.ubc.ca/profile/lily-crandall-oral/" target="_blank">Lily Demet</a> and reviewed by Alex Alisauskas.</p>
