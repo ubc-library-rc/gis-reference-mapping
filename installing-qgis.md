@@ -27,7 +27,6 @@ Install QGIS for your operating system. From [qgis.org's Downloads page](https:/
 <img src="./content/images/download-qgis-windows1.png" style="width:100%">
 <img src="./content/images/download-qgis-windows2.png" style="width:100%">
     
-Later on in this workshop, you will be given a tour of the interface, as well as guided through adding data to a project and saving your project. For now, just make sure you have properly downloaded QGIS and are able to launch it. See below for troubleshooting tips if you're working on a Mac computer. 
 
 <br>
 
