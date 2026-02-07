@@ -29,9 +29,11 @@ Adjust the scale of your inset map so that the entirety of Canada is visible, to
 
 You can now add neatlines and labeling to both maps. Note that the map scalebar and north arrow should be for the Main map. In some instances, for example when you are creating an inset to zoom in on an area of a thematic map, a scalebar/north arrow for the inset as well is warranted.
 
-You may notice that the `Lakes` layer is only visible on the main map. This is because it is quite distracting to have all the lakes in a zoomed-out map. To get a layer showing up in only one map, turn the layer off in your main QGIS interface and then update the map preview for only the inset.  <img src="./images/inset-update-map-preview_20251102.png" style="width:1%">
+You may notice that the `Lakes` layer is only visible on the main map. This is because it is quite distracting to have all the lakes in a zoomed-out map. To get a layer showing up in only one map, turn the layer off in your main QGIS interface and then update the map preview for only the inset.     
 
-<br>
+<img src="./images/inset-update-map-preview_20251102.png" style="width:5%">
+
+
 
 You can also create leader lines from an area to the inset that's zooming in. However, be sure the inset is the same shape of an area locator and contains exactly what is inside it. 
 
