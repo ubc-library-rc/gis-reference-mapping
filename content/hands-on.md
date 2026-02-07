@@ -23,7 +23,7 @@ Here is an example of the map we will make, styled in different ways:
 
 ![canada map](./images/canada-map-example_20251113.jpeg)
 
-![canada map](./images/canada-map-demo.jpeg)
+<!-- ![canada map](./images/canada-map-demo.jpeg) -->
 
 ![canada map](./images/canada-map-multicolored.jpeg)
 
