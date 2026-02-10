@@ -9,6 +9,10 @@ parent: Additional Content
 Cartograms distort area to emphasize the value associated with a geographic region. When using cartograms, it's important to consider whether your audience is already familiar with the un-distorted  geography, otherwise they might not glean the added information. 
 ![cartogram map](./images/chestnut-cartogram-map.jpeg)
 
+
+If you haven't already, please **download and unzip the workshop folder**. Remember to download it to a location on your physical computer, like Desktop or Downloads. *Do not download it to OneDrive*. The data for the Additional Content exercises (such as this one) will be in the `thematic-mapping` subfolder. 
+
+[Download Workshop Data](../reference-mapping-workshop.zip){: .btn .btn-blue }
 ----
 
 ## Making a cartogram

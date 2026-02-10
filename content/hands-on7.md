@@ -8,7 +8,7 @@ parent: Additional Content
 
 Tabular data stored in CSV (comma separated value) files can be uploaded to a GIS and rendered spatial so long as latitude and longitude are given in two distinct columns and their values stored *as numbers*. The following page will demonstrate how to upload CSV data to a QGIS project. 
 
-If you haven't already, please **download and unzip the workshop folder**. Remember to download it to a location on your physical computer, like Desktop or Downloads. *Do not download it to OneDrive*. 
+If you haven't already, please **download and unzip the workshop folder**. Remember to download it to a location on your physical computer, like Desktop or Downloads. *Do not download it to OneDrive*. The data for the Additional Content exercises (such as this one) will be in the `thematic-mapping` subfolder. 
 
 [Download Workshop Data](../reference-mapping-workshop.zip){: .btn .btn-blue }
 

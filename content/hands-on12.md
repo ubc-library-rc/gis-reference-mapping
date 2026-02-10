@@ -20,6 +20,10 @@ Note: In most cases you *do not* normalize values when using proportional symbol
 You can make proportional symbol maps in QGIS simply by converting polygons to centroids (if not already points) and then going to symbology and choosing Graduated. The following documentation breaks down how to do this. 
 <br>
 
+If you haven't already, please **download and unzip the workshop folder**. Remember to download it to a location on your physical computer, like Desktop or Downloads. *Do not download it to OneDrive*. The data for the Additional Content exercises (such as this one) will be in the `thematic-mapping` subfolder. 
+
+[Download Workshop Data](../reference-mapping-workshop.zip){: .btn .btn-blue }
+
 *1*{: .circle .circle-yellow} To make a proportional symbol map like the above, where symbol size corresponds to the number of chestnut trees per neighborhood, we first need to run the **Centroids** tool on the `chestnut-count` polygon layer. You can also find the results of this in the `thematic-mapping` subfolder. Either create a centroids layer, or add the file `chestnut-count-centroids.geojson` to your project. 
 
 <img src="./images/proportional-symbol-centroids_20251102.png" style="width:100%">
