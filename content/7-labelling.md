@@ -1,0 +1,44 @@
+---
+layout: default
+title: 5. Labelling
+nav_order: 5
+parent: Hands On
+---
+# Labelling
+{: .no_toc}
+Another Layer Property useful to know is Labels. The Labels Property allows you to add labels to a layer based on a specified attribute value. You can turn off the labels at any time by returning to a layer’s properties, or by right-clicking the layer and clicking “Show Labels” again.
+<br>
+
+## Add Provincial Labels
+Open the **Layer Properties** for `provinces`. Navigate to **Labels** just beneath Symbology.
+
+>  Change **No Labels** to **Single Labels**. 
+<br>
+
+
+>  Set the **Value** to `PRENAME. This way the labels will appear as each Province's name (English). 
+
+
+<img src="./images/add-labels_20250915.png" style="width:100%">
+
+
+<br>
+You can customize your labels quite a bit. 
+
+First, you can change the size, font, color, and opacity (or transparency) of your text from the **Text** option.
+
+<img src="./images/labelling3.png" style="width:90%">
+<br>
+
+If your text is difficult to read, you can add a buffer to highlight it from the background. Considering visual hierarchy, it can be a good idea to use a semi-transparent color that's already predominant in the map's background to highlight your text. 
+
+<img src="./images/labelling4.png" style="width:80%">
+
+Finally, you can adjust the labels' placement around a point by going down to **Placement**. This is most useful when labelling polygons.
+
+
+<img src="./images/labels-added_20250915.png" style="width:100%">
+
+
+
+

@@ -1,9 +1,9 @@
----
+<!-- ---
 layout: default
 title: Exporting to Inkscape
 nav_order: 15
 parent: Additional Content
----
+--- -->
 
 # Exporting your QGIS Map to Inkscape 
 

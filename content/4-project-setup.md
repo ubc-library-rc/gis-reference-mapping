@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 2. Project Set up
+title: 2. Project Set-up
 nav_order: 2
 parent: Hands On
 ---

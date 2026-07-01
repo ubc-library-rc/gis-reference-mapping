@@ -1,11 +1,11 @@
----
+<!-- ---
 layout: default
 title: 3. Modifying Layers
 nav_order: 3
 parent: Hands On
 ---
 # Modifying Layers
-{: .no_toc}
+{: .no_toc} -->
 
 As they are, the layers we've added to our map canvas aren't particularly aesthetic, nor is foreground adequately differentiated from background. This page (and the next) will guide you through modifying your layers' symbology to create a more polished looking map where what's deemed important stands out. 
 
@@ -25,7 +25,7 @@ This page will also note some considerations specific to mapping for academic pu
 
 
 ## Attribute Table
-The **Attribute Table** contains the tabular data associated with a layer. Though not relevant to today's focus on reference mapping, it is important you know what the attribute table is, and how to access it. To open a layer's attribute table, right-click the layer in the Layers Panel and go to "Open Attribute Table". For more experience in with the attribute table, you are encouraged to explore our [Intro to QGIS](https://ubc-library-rc.github.io/gis-intro-qgis/) and [Tools and Workflows in QGIS](https://ubc-library-rc.github.io/gis-tools-workflows/) beginner workshops.
+The **Attribute Table** contains the tabular data associated with a layer. Though not relevant to today's focus on reference mapping, it is important you know what the attribute table is, and how to access it. To open a layer's attribute table, right-click the layer in the Layers Panel and go to "Open Attribute Table". For more experience in with the attribute table, you are encouraged to explore our [Thematic Mapping Workshop](https://ubc-library-rc.github.io/gis-thematic-mapping/){:target="_blank"}.
 
 To Do
 {: .label .label-green }
