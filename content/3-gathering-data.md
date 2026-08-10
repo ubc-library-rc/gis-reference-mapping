@@ -30,18 +30,31 @@ Follow the instructions below to find and download this data. Remember, move eac
 ----
 
 ## Download Data
-<br>
 
-### **1. Download Canadian provincial boundaries from Statistics Canada**      
-For this workshop, we'll use the dataset from 2016 because it downloads the fastest. Navigate to the following link: [https://open.canada.ca/data/en/dataset/a883eb14-0c0e-45c4-b8c4-b54c4a819edb](https://open.canada.ca/data/en/dataset/a883eb14-0c0e-45c4-b8c4-b54c4a819edb){:target="_blank"}. You will see many file options. Download the very first one by clicking **Go to resource**. 
+
+### **1. Download Provincial Boundaries**  
+We'll download [provincial boundaries](https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm?year=21){:target="_blank"} from census data hosted by the Government of Canada's data portal. The website calls it **2021 Census – Boundary files**. 
+
+
+<img src="./images/gathering1.png" style="width:100%">
+
+<img src="./images/gathering2.png" style="width:100%">
+
+<br><Br>
+
+If you find this takes a long time to download, you can [download the dataset from 2016](https://open.canada.ca/data/en/dataset/a883eb14-0c0e-45c4-b8c4-b54c4a819edb){:target="_blank"}instead. Download the very first one by clicking **Go to resource**.
 
 ![province download](./images/province-download-2016_20250911.png)
 
-This will take a minute or so to download, so while you're waiting, move on to downloading the next dataset.
+<!-- For this workshop, we'll use the dataset from 2016 because it downloads the fastest. Navigate to the following link: [https://open.canada.ca/data/en/dataset/a883eb14-0c0e-45c4-b8c4-b54c4a819edb](https://open.canada.ca/data/en/dataset/a883eb14-0c0e-45c4-b8c4-b54c4a819edb){:target="_blank"}. You will see many file options. Download the very first one by clicking **Go to resource**. 
 
-<!--(though you are welcome to find and use the [2021 dataset](https://open.canada.ca/data/en/dataset/ef70dc3b-1069-4037-9bce-61f47e628a1d) if you prefer). actually no If you want to use 2021, you can go [here](https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm?year=21) and select xyz. The  [2022 provincial dataset](https://open.canada.ca/data/en/dataset/85efc01b-163f-ebba-2378-c43eadfb3b3f) but not as crisp and for some reason doesnt demarcate provinces on load-->
+![province download](./images/province-download-2016_20250911.png)
 
-<br>
+This will take a minute or so to download, so while you're waiting, move on to downloading the next dataset. -->
+
+
+
+<br><br>
 
 ### **2. Download Natural Earth Data**    
 Navigate to [www.naturalearthdata.com](https://www.naturalearthdata.com/){:target="_blank"}. Go to **Downloads**. 
